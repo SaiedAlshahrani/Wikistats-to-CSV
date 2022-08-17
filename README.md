@@ -1,2 +1,2 @@
 # Wikistats-to-CSV
-Wikistats-to-CSV too downloads Wikipedia Statistics in CSV format.
+Wikistats-to-CSV tool downloads Wikipedia Statistics in CSV format.
