@@ -61,12 +61,12 @@ class Reading:
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save the metric due to connection timeout!! Try downloading it manually from here:')                
+                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print('## Error: there is no data available for this date range on this Wikipedia.\n')
             else:  
-                print(f"## Error: something unknown went wrong! Sorry, try again!.\n")
+                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
         finally: exit()
 
@@ -125,12 +125,12 @@ class Reading:
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save the metric due to connection timeout!! Try downloading it manually from here:')                
+                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print('## Error: there is no data available for this date range on this Wikipedia.\n')
             else:  
-                print(f"## Error: something unknown went wrong! Sorry, try again!.\n")
+                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
         finally: exit()
 
@@ -192,12 +192,12 @@ class Reading:
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save the metric due to connection timeout!! Try downloading it manually from here:')                
+                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print('## Error: there is no data available for this date range on this Wikipedia.\n')
             else:  
-                print(f"## Error: something unknown went wrong! Sorry, try again!.\n")
+                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
         finally: exit()
 
@@ -256,12 +256,12 @@ class Reading:
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save the metric due to connection timeout!! Try downloading it manually from here:')                
+                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print('## Error: there is no data available for this date range on this Wikipedia.\n')
             else:  
-                print(f"## Error: something unknown went wrong! Sorry, try again!.\n")
+                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
         finally: exit()
 
@@ -323,11 +323,11 @@ class Reading:
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save the metric due to connection timeout!! Try downloading it manually from here:')                
+                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print('## Error: there is no data available for this date range on this Wikipedia.\n')
             else:  
-                print(f"## Error: something unknown went wrong! Sorry, try again!.\n")
+                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
         finally: exit()
