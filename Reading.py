@@ -4,7 +4,9 @@ from Helper import *
 from time import sleep
 from selenium import webdriver
 
-class Reading:
+
+class Reading_Metrics:
+
     def total_page_views(wiki, period, filter, interval):
         try:
             wikis = Helper.get_Wikis_Codes()
@@ -25,7 +27,7 @@ class Reading:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/total-page-views/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -89,7 +91,7 @@ class Reading:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/legacy-page-views/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -156,7 +158,7 @@ class Reading:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/page-views-by-country/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -220,7 +222,7 @@ class Reading:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/unique-devices/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -287,7 +289,7 @@ class Reading:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/top-viewed-articles/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'

@@ -1,0 +1,2423 @@
+$$$ Testing: `total_page_views(wiki, period, filter, interval)`:
+@@ Iteration #1:  wiki=`en`,  period=`all-years`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--total-page-views--no-filter--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--all-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z    301567444  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z    304616009  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z    312382159  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z    308580001  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #2:  wiki=`en`,  period=`all-years`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--total-page-views--no-filter--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--all-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z   9717306043  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z   9468568402  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z   8898068759  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z   9387220569  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #3:  wiki=`en`,  period=`all-years`,  filter=`access-method-desktop`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-desktop--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--all-years--daily.csv` file:
+                        month  total.desktop           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z      154865244  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z      156436318  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...            ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z      144337313  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z      143307564  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #4:  wiki=`en`,  period=`all-years`,  filter=`access-method-desktop`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-desktop--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--all-years--monthly.csv` file:
+                       month  total.desktop           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z     4725026577  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z     4523070045  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...            ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z     4303117342  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z     4271490455  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #5:  wiki=`en`,  period=`all-years`,  filter=`access-method-mobile-app`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-app--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--all-years--daily.csv` file:
+                        month  total.mobile-app           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z           1526857  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z           3976720  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...               ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z           5185047  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z           5103056  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #6:  wiki=`en`,  period=`all-years`,  filter=`access-method-mobile-app`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-app--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--all-years--monthly.csv` file:
+                       month  total.mobile-app           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z         153448454  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z         155800297  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...               ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z         159577032  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z         169604587  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #7:  wiki=`en`,  period=`all-years`,  filter=`access-method-mobile-web`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-web--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--all-years--daily.csv` file:
+                        month  total.mobile-web           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z         145175343  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z         144202971  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...               ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #8:  wiki=`en`,  period=`all-years`,  filter=`access-method-mobile-web`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-web--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--all-years--monthly.csv` file:
+                       month  total.mobile-web           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z        4838831012  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z        4789698060  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...               ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z        4435374385  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z        4946125527  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #9:  wiki=`en`,  period=`all-years`,  filter=`access-method-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-all--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--all-years--daily.csv` file:
+                        month  total.desktop  total.mobile-app  total.mobile-web           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z      154865244           1526857         145175343  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z      156436318           3976720         144202971  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...            ...               ...               ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z      144337313           5185047         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z      143307564           5103056         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #10:  wiki=`en`,  period=`all-years`,  filter=`access-method-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-all--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--all-years--monthly.csv` file:
+                       month  total.mobile-web  total.desktop  total.mobile-app           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z        4838831012     4725026577         153448454  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z        4789698060     4523070045         155800297  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...               ...            ...               ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z        4435374385     4303117342         159577032  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z        4946125527     4271490455         169604587  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #11:  wiki=`en`,  period=`all-years`,  filter=`agent-type-user`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-user--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--all-years--daily.csv` file:
+                        month  total.user           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z   228514637  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z   228487552  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...         ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z   231071875  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z   227676010  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #12:  wiki=`en`,  period=`all-years`,  filter=`agent-type-user`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-user--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--all-years--monthly.csv` file:
+                       month  total.user           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z  7448650597  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z  7416366900  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...         ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z  6732995979  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z  7002382082  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #13:  wiki=`en`,  period=`all-years`,  filter=`agent-type-spider`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-spider--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--all-years--daily.csv` file:
+                        month  total.spider           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z      50276922  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z      52659583  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...           ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z      47445839  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z      48258539  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #14:  wiki=`en`,  period=`all-years`,  filter=`agent-type-spider`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-spider--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--all-years--monthly.csv` file:
+                       month  total.spider           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    1582484910  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    1415037774  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...           ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    1496942879  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    1438614777  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #15:  wiki=`en`,  period=`all-years`,  filter=`agent-type-automated`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-automated--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--all-years--daily.csv` file:
+                        month  total.automated           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z         22775885  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z         23468874  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...              ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #16:  wiki=`en`,  period=`all-years`,  filter=`agent-type-automated`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-automated--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--all-years--monthly.csv` file:
+                       month  total.automated           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z        686170536  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z        637163728  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...              ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z        668129901  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z        946223710  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #17:  wiki=`en`,  period=`all-years`,  filter=`agent-type-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-all--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--all-years--daily.csv` file:
+                        month  total.user  total.spider  total.automated           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z   228514637      50276922         22775885  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z   228487552      52659583         23468874  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...         ...           ...              ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z   231071875      47445839         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z   227676010      48258539         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #18:  wiki=`en`,  period=`all-years`,  filter=`agent-type-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-all--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--all-years--monthly.csv` file:
+                       month  total.automated  total.user  total.spider           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z        686170536  7448650597    1582484910  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z        637163728  7416366900    1415037774  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...              ...         ...           ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z        668129901  6732995979    1496942879  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z        946223710  7002382082    1438614777  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #19:  wiki=`en`,  period=`one-year`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--total-page-views--no-filter--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--one-year--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2021-07-01T00:00:00.000Z    325657505  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z
+1    2021-07-02T00:00:00.000Z    315590650  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+412  2022-08-17T00:00:00.000Z    312382159  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+413  2022-08-18T00:00:00.000Z    308580001  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #20:  wiki=`en`,  period=`one-year`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--total-page-views--no-filter--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--one-year--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z   9850698065  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z   9745260330  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z   8898068759  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z   9387220569  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #21:  wiki=`en`,  period=`one-year`,  filter=`access-method-desktop`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-desktop--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--one-year--daily.csv` file:
+                        month  total.desktop           timeRange.start             timeRange.end
+0    2021-07-01T00:00:00.000Z      168011456  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z
+1    2021-07-02T00:00:00.000Z      156633343  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z
+..                        ...            ...                       ...                       ...
+412  2022-08-17T00:00:00.000Z      144337313  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+413  2022-08-18T00:00:00.000Z      143307564  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #22:  wiki=`en`,  period=`one-year`,  filter=`access-method-desktop`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-desktop--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--one-year--monthly.csv` file:
+                       month  total.desktop           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z     4808630771  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z     4777404193  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...            ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z     4303117342  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z     4271490455  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #23:  wiki=`en`,  period=`one-year`,  filter=`access-method-mobile-app`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-app--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--one-year--daily.csv` file:
+                        month  total.mobile-app           timeRange.start             timeRange.end
+0    2021-07-01T00:00:00.000Z           4848589  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z
+1    2021-07-02T00:00:00.000Z           5013317  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z
+..                        ...               ...                       ...                       ...
+412  2022-08-17T00:00:00.000Z           5185047  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+413  2022-08-18T00:00:00.000Z           5103056  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #24:  wiki=`en`,  period=`one-year`,  filter=`access-method-mobile-app`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-app--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--one-year--monthly.csv` file:
+                       month  total.mobile-app           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z         161827991  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z         161731868  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...               ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z         159577032  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z         169604587  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #25:  wiki=`en`,  period=`one-year`,  filter=`access-method-mobile-web`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-web--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--one-year--daily.csv` file:
+                        month  total.mobile-web           timeRange.start             timeRange.end
+0    2021-07-01T00:00:00.000Z         152797460  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z
+1    2021-07-02T00:00:00.000Z         153943990  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z
+..                        ...               ...                       ...                       ...
+412  2022-08-17T00:00:00.000Z         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+413  2022-08-18T00:00:00.000Z         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #26:  wiki=`en`,  period=`one-year`,  filter=`access-method-mobile-web`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-web--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--one-year--monthly.csv` file:
+                       month  total.mobile-web           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z        4880239303  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z        4806124269  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...               ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z        4435374385  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z        4946125527  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #27:  wiki=`en`,  period=`one-year`,  filter=`access-method-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-all--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--one-year--daily.csv` file:
+                        month  total.mobile-app  total.desktop  total.mobile-web           timeRange.start             timeRange.end
+0    2021-07-01T00:00:00.000Z           4848589      168011456         152797460  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z
+1    2021-07-02T00:00:00.000Z           5013317      156633343         153943990  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z
+..                        ...               ...            ...               ...                       ...                       ...
+412  2022-08-17T00:00:00.000Z           5185047      144337313         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+413  2022-08-18T00:00:00.000Z           5103056      143307564         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #28:  wiki=`en`,  period=`one-year`,  filter=`access-method-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-all--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--one-year--monthly.csv` file:
+                       month  total.desktop  total.mobile-web  total.mobile-app           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z     4808630771        4880239303         161827991  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z     4777404193        4806124269         161731868  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...            ...               ...               ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z     4303117342        4435374385         159577032  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z     4271490455        4946125527         169604587  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #29:  wiki=`en`,  period=`one-year`,  filter=`agent-type-user`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-user--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--one-year--daily.csv` file:
+                        month  total.user           timeRange.start             timeRange.end
+0    2021-07-01T00:00:00.000Z   243319973  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z
+1    2021-07-02T00:00:00.000Z   238255723  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z
+..                        ...         ...                       ...                       ...
+412  2022-08-17T00:00:00.000Z   231071875  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+413  2022-08-18T00:00:00.000Z   227676010  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #30:  wiki=`en`,  period=`one-year`,  filter=`agent-type-user`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-user--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--one-year--monthly.csv` file:
+                       month  total.user           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z  7544493789  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z  7495607934  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...         ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z  6732995979  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z  7002382082  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #31:  wiki=`en`,  period=`one-year`,  filter=`agent-type-spider`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-spider--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--one-year--daily.csv` file:
+                        month  total.spider           timeRange.start             timeRange.end
+0    2021-07-01T00:00:00.000Z      57638583  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z
+1    2021-07-02T00:00:00.000Z      57633057  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z
+..                        ...           ...                       ...                       ...
+412  2022-08-17T00:00:00.000Z      47445839  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+413  2022-08-18T00:00:00.000Z      48258539  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #32:  wiki=`en`,  period=`one-year`,  filter=`agent-type-spider`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-spider--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--one-year--monthly.csv` file:
+                       month  total.spider           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z    1698720381  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z    1625443227  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...           ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z    1496942879  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z    1438614777  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #33:  wiki=`en`,  period=`one-year`,  filter=`agent-type-automated`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-automated--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--one-year--daily.csv` file:
+                        month  total.automated           timeRange.start             timeRange.end
+0    2021-07-01T00:00:00.000Z         24698949  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z
+1    2021-07-02T00:00:00.000Z         19701870  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z
+..                        ...              ...                       ...                       ...
+412  2022-08-17T00:00:00.000Z         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+413  2022-08-18T00:00:00.000Z         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #34:  wiki=`en`,  period=`one-year`,  filter=`agent-type-automated`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-automated--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--one-year--monthly.csv` file:
+                       month  total.automated           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z        607483895  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z        624209169  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...              ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z        668129901  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z        946223710  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #35:  wiki=`en`,  period=`one-year`,  filter=`agent-type-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-all--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--one-year--daily.csv` file:
+                        month  total.spider  total.user  total.automated           timeRange.start             timeRange.end
+0    2021-07-01T00:00:00.000Z      57638583   243319973         24698949  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z
+1    2021-07-02T00:00:00.000Z      57633057   238255723         19701870  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z
+..                        ...           ...         ...              ...                       ...                       ...
+412  2022-08-17T00:00:00.000Z      47445839   231071875         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+413  2022-08-18T00:00:00.000Z      48258539   227676010         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #36:  wiki=`en`,  period=`one-year`,  filter=`agent-type-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-all--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--one-year--monthly.csv` file:
+                       month  total.user  total.automated  total.spider           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z  7544493789        607483895    1698720381  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z  7495607934        624209169    1625443227  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...         ...              ...           ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z  6732995979        668129901    1496942879  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z  7002382082        946223710    1438614777  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #37:  wiki=`en`,  period=`two-years`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--total-page-views--no-filter--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--two-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z    301567444  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z    304616009  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z    312382159  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z    308580001  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #38:  wiki=`en`,  period=`two-years`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--total-page-views--no-filter--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--two-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z   9717306043  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z   9468568402  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z   8898068759  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z   9387220569  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #39:  wiki=`en`,  period=`two-years`,  filter=`access-method-desktop`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-desktop--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--two-years--daily.csv` file:
+                        month  total.desktop           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z      154865244  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z      156436318  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...            ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z      144337313  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z      143307564  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #40:  wiki=`en`,  period=`two-years`,  filter=`access-method-desktop`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-desktop--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--two-years--monthly.csv` file:
+                       month  total.desktop           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z     4725026577  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z     4523070045  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...            ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z     4303117342  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z     4271490455  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #41:  wiki=`en`,  period=`two-years`,  filter=`access-method-mobile-app`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-app--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--two-years--daily.csv` file:
+                        month  total.mobile-app           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z           1526857  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z           3976720  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...               ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z           5185047  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z           5103056  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #42:  wiki=`en`,  period=`two-years`,  filter=`access-method-mobile-app`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-app--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--two-years--monthly.csv` file:
+                       month  total.mobile-app           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z         153448454  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z         155800297  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...               ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z         159577032  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z         169604587  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #43:  wiki=`en`,  period=`two-years`,  filter=`access-method-mobile-web`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-web--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--two-years--daily.csv` file:
+                        month  total.mobile-web           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z         145175343  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z         144202971  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...               ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #44:  wiki=`en`,  period=`two-years`,  filter=`access-method-mobile-web`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-web--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--two-years--monthly.csv` file:
+                       month  total.mobile-web           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z        4838831012  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z        4789698060  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...               ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z        4435374385  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z        4946125527  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #45:  wiki=`en`,  period=`two-years`,  filter=`access-method-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-all--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--two-years--daily.csv` file:
+                        month  total.desktop  total.mobile-app  total.mobile-web           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z      154865244           1526857         145175343  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z      156436318           3976720         144202971  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...            ...               ...               ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z      144337313           5185047         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z      143307564           5103056         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #46:  wiki=`en`,  period=`two-years`,  filter=`access-method-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-all--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--two-years--monthly.csv` file:
+                       month  total.mobile-web  total.desktop  total.mobile-app           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z        4838831012     4725026577         153448454  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z        4789698060     4523070045         155800297  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...               ...            ...               ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z        4435374385     4303117342         159577032  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z        4946125527     4271490455         169604587  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #47:  wiki=`en`,  period=`two-years`,  filter=`agent-type-user`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-user--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--two-years--daily.csv` file:
+                        month  total.user           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z   228514637  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z   228487552  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...         ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z   231071875  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z   227676010  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #48:  wiki=`en`,  period=`two-years`,  filter=`agent-type-user`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-user--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--two-years--monthly.csv` file:
+                       month  total.user           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z  7448650597  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z  7416366900  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...         ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z  6732995979  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z  7002382082  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #49:  wiki=`en`,  period=`two-years`,  filter=`agent-type-spider`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-spider--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--two-years--daily.csv` file:
+                        month  total.spider           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z      50276922  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z      52659583  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...           ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z      47445839  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z      48258539  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #50:  wiki=`en`,  period=`two-years`,  filter=`agent-type-spider`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-spider--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--two-years--monthly.csv` file:
+                       month  total.spider           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    1582484910  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    1415037774  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...           ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    1496942879  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    1438614777  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #51:  wiki=`en`,  period=`two-years`,  filter=`agent-type-automated`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-automated--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--two-years--daily.csv` file:
+                        month  total.automated           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z         22775885  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z         23468874  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...              ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #52:  wiki=`en`,  period=`two-years`,  filter=`agent-type-automated`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-automated--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--two-years--monthly.csv` file:
+                       month  total.automated           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z        686170536  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z        637163728  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...              ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z        668129901  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z        946223710  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #53:  wiki=`en`,  period=`two-years`,  filter=`agent-type-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-all--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--two-years--daily.csv` file:
+                        month  total.user  total.spider  total.automated           timeRange.start             timeRange.end
+0    2020-07-01T00:00:00.000Z   228514637      50276922         22775885  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z
+1    2020-07-02T00:00:00.000Z   228487552      52659583         23468874  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z
+..                        ...         ...           ...              ...                       ...                       ...
+777  2022-08-17T00:00:00.000Z   231071875      47445839         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+778  2022-08-18T00:00:00.000Z   227676010      48258539         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #54:  wiki=`en`,  period=`two-years`,  filter=`agent-type-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-all--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--two-years--monthly.csv` file:
+                       month  total.automated  total.user  total.spider           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z        686170536  7448650597    1582484910  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z        637163728  7416366900    1415037774  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...              ...         ...           ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z        668129901  6732995979    1496942879  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z        946223710  7002382082    1438614777  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #55:  wiki=`en`,  period=`three-months`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--total-page-views--no-filter--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--three-months--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2022-04-01T00:00:00.000Z    297730263  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z
+1    2022-04-02T00:00:00.000Z    289615432  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+138  2022-08-17T00:00:00.000Z    312382159  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+139  2022-08-18T00:00:00.000Z    308580001  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #56:  wiki=`en`,  period=`three-months`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--total-page-views--no-filter--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--three-months--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z   9083181076  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z   9291179547  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z   8898068759  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z   9387220569  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #57:  wiki=`en`,  period=`three-months`,  filter=`access-method-desktop`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-desktop--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--three-months--daily.csv` file:
+                        month  total.desktop           timeRange.start             timeRange.end
+0    2022-04-01T00:00:00.000Z      154817211  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z
+1    2022-04-02T00:00:00.000Z      129691940  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z
+..                        ...            ...                       ...                       ...
+138  2022-08-17T00:00:00.000Z      144337313  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+139  2022-08-18T00:00:00.000Z      143307564  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #58:  wiki=`en`,  period=`three-months`,  filter=`access-method-desktop`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-desktop--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--three-months--monthly.csv` file:
+                      month  total.desktop           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z     4484609559  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z     4532530600  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z     4303117342  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z     4271490455  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #59:  wiki=`en`,  period=`three-months`,  filter=`access-method-mobile-app`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-app--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--three-months--daily.csv` file:
+                        month  total.mobile-app           timeRange.start             timeRange.end
+0    2022-04-01T00:00:00.000Z           4977151  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z
+1    2022-04-02T00:00:00.000Z           5786228  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z
+..                        ...               ...                       ...                       ...
+138  2022-08-17T00:00:00.000Z           5185047  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+139  2022-08-18T00:00:00.000Z           5103056  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #60:  wiki=`en`,  period=`three-months`,  filter=`access-method-mobile-app`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-app--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--three-months--monthly.csv` file:
+                      month  total.mobile-app           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z         160696630  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z         163354372  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z         159577032  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z         169604587  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #61:  wiki=`en`,  period=`three-months`,  filter=`access-method-mobile-web`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-web--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--three-months--daily.csv` file:
+                        month  total.mobile-web           timeRange.start             timeRange.end
+0    2022-04-01T00:00:00.000Z         137935901  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z
+1    2022-04-02T00:00:00.000Z         154137264  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z
+..                        ...               ...                       ...                       ...
+138  2022-08-17T00:00:00.000Z         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+139  2022-08-18T00:00:00.000Z         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #62:  wiki=`en`,  period=`three-months`,  filter=`access-method-mobile-web`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-web--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--three-months--monthly.csv` file:
+                      month  total.mobile-web           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z        4437874887  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z        4595294575  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z        4435374385  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z        4946125527  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #63:  wiki=`en`,  period=`three-months`,  filter=`access-method-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-all--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--three-months--daily.csv` file:
+                        month  total.mobile-app  total.desktop  total.mobile-web           timeRange.start             timeRange.end
+0    2022-04-01T00:00:00.000Z           4977151      154817211         137935901  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z
+1    2022-04-02T00:00:00.000Z           5786228      129691940         154137264  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z
+..                        ...               ...            ...               ...                       ...                       ...
+138  2022-08-17T00:00:00.000Z           5185047      144337313         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+139  2022-08-18T00:00:00.000Z           5103056      143307564         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #64:  wiki=`en`,  period=`three-months`,  filter=`access-method-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-all--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--three-months--monthly.csv` file:
+                      month  total.mobile-web  total.mobile-app  total.desktop           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z        4437874887         160696630     4484609559  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z        4595294575         163354372     4532530600  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z        4435374385         159577032     4303117342  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z        4946125527         169604587     4271490455  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #65:  wiki=`en`,  period=`three-months`,  filter=`agent-type-user`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-user--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--three-months--daily.csv` file:
+                        month  total.user           timeRange.start             timeRange.end
+0    2022-04-01T00:00:00.000Z   225226395  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z
+1    2022-04-02T00:00:00.000Z   226583342  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z
+..                        ...         ...                       ...                       ...
+138  2022-08-17T00:00:00.000Z   231071875  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+139  2022-08-18T00:00:00.000Z   227676010  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #66:  wiki=`en`,  period=`three-months`,  filter=`agent-type-user`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-user--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--three-months--monthly.csv` file:
+                      month  total.user           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z  6999072343  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z  7066842129  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z  6732995979  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z  7002382082  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #67:  wiki=`en`,  period=`three-months`,  filter=`agent-type-spider`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-spider--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--three-months--daily.csv` file:
+                        month  total.spider           timeRange.start             timeRange.end
+0    2022-04-01T00:00:00.000Z      44161268  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z
+1    2022-04-02T00:00:00.000Z      40652338  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z
+..                        ...           ...                       ...                       ...
+138  2022-08-17T00:00:00.000Z      47445839  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+139  2022-08-18T00:00:00.000Z      48258539  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #68:  wiki=`en`,  period=`three-months`,  filter=`agent-type-spider`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-spider--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--three-months--monthly.csv` file:
+                      month  total.spider           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z    1431693832  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z    1578160781  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z    1496942879  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z    1438614777  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #69:  wiki=`en`,  period=`three-months`,  filter=`agent-type-automated`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-automated--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--three-months--daily.csv` file:
+                        month  total.automated           timeRange.start             timeRange.end
+0    2022-04-01T00:00:00.000Z         28342600  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z
+1    2022-04-02T00:00:00.000Z         22379752  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z
+..                        ...              ...                       ...                       ...
+138  2022-08-17T00:00:00.000Z         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+139  2022-08-18T00:00:00.000Z         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #70:  wiki=`en`,  period=`three-months`,  filter=`agent-type-automated`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-automated--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--three-months--monthly.csv` file:
+                      month  total.automated           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z        652414901  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z        646176637  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z        668129901  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z        946223710  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #71:  wiki=`en`,  period=`three-months`,  filter=`agent-type-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-all--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--three-months--daily.csv` file:
+                        month  total.spider  total.user  total.automated           timeRange.start             timeRange.end
+0    2022-04-01T00:00:00.000Z      44161268   225226395         28342600  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z
+1    2022-04-02T00:00:00.000Z      40652338   226583342         22379752  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z
+..                        ...           ...         ...              ...                       ...                       ...
+138  2022-08-17T00:00:00.000Z      47445839   231071875         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+139  2022-08-18T00:00:00.000Z      48258539   227676010         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #72:  wiki=`en`,  period=`three-months`,  filter=`agent-type-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-all--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--three-months--monthly.csv` file:
+                      month  total.automated  total.spider  total.user           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z        652414901    1431693832  6999072343  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z        646176637    1578160781  7066842129  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z        668129901    1496942879  6732995979  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z        946223710    1438614777  7002382082  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #73:  wiki=`en`,  period=`one-month`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--total-page-views--no-filter--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--one-month--daily.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2022-06-01T00:00:00.000Z    297919634  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z
+1   2022-06-02T00:00:00.000Z    294295689  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+77  2022-08-17T00:00:00.000Z    312382159  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+78  2022-08-18T00:00:00.000Z    308580001  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #74:  wiki=`en`,  period=`one-month`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--total-page-views--no-filter--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--no-filter--one-month--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z   8898068759  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z   9387220569  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #75:  wiki=`en`,  period=`one-month`,  filter=`access-method-desktop`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-desktop--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--one-month--daily.csv` file:
+                       month  total.desktop           timeRange.start             timeRange.end
+0   2022-06-01T00:00:00.000Z      150016419  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z
+1   2022-06-02T00:00:00.000Z      144433328  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z
+..                       ...            ...                       ...                       ...
+77  2022-08-17T00:00:00.000Z      144337313  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+78  2022-08-18T00:00:00.000Z      143307564  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #76:  wiki=`en`,  period=`one-month`,  filter=`access-method-desktop`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-desktop--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-desktop--one-month--monthly.csv` file:
+                      month  total.desktop           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z     4303117342  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z     4271490455  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #77:  wiki=`en`,  period=`one-month`,  filter=`access-method-mobile-app`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-app--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--one-month--daily.csv` file:
+                       month  total.mobile-app           timeRange.start             timeRange.end
+0   2022-06-01T00:00:00.000Z           4991357  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z
+1   2022-06-02T00:00:00.000Z           5146728  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z
+..                       ...               ...                       ...                       ...
+77  2022-08-17T00:00:00.000Z           5185047  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+78  2022-08-18T00:00:00.000Z           5103056  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #78:  wiki=`en`,  period=`one-month`,  filter=`access-method-mobile-app`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-app--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-app--one-month--monthly.csv` file:
+                      month  total.mobile-app           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z         159577032  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z         169604587  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #79:  wiki=`en`,  period=`one-month`,  filter=`access-method-mobile-web`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-mobile-web--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--one-month--daily.csv` file:
+                       month  total.mobile-web           timeRange.start             timeRange.end
+0   2022-06-01T00:00:00.000Z         142911858  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z
+1   2022-06-02T00:00:00.000Z         144715633  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z
+..                       ...               ...                       ...                       ...
+77  2022-08-17T00:00:00.000Z         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+78  2022-08-18T00:00:00.000Z         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #80:  wiki=`en`,  period=`one-month`,  filter=`access-method-mobile-web`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-mobile-web--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-mobile-web--one-month--monthly.csv` file:
+                      month  total.mobile-web           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z        4435374385  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z        4946125527  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #81:  wiki=`en`,  period=`one-month`,  filter=`access-method-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--access-method-all--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--one-month--daily.csv` file:
+                       month  total.desktop  total.mobile-app  total.mobile-web           timeRange.start             timeRange.end
+0   2022-06-01T00:00:00.000Z      150016419           4991357         142911858  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z
+1   2022-06-02T00:00:00.000Z      144433328           5146728         144715633  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z
+..                       ...            ...               ...               ...                       ...                       ...
+77  2022-08-17T00:00:00.000Z      144337313           5185047         162859799  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+78  2022-08-18T00:00:00.000Z      143307564           5103056         160169381  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #82:  wiki=`en`,  period=`one-month`,  filter=`access-method-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--access-method-all--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--access-method-all--one-month--monthly.csv` file:
+                      month  total.mobile-web  total.mobile-app  total.desktop           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z        4435374385         159577032     4303117342  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z        4946125527         169604587     4271490455  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #83:  wiki=`en`,  period=`one-month`,  filter=`agent-type-user`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-user--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--one-month--daily.csv` file:
+                       month  total.user           timeRange.start             timeRange.end
+0   2022-06-01T00:00:00.000Z   224819362  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z
+1   2022-06-02T00:00:00.000Z   225304222  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z
+..                       ...         ...                       ...                       ...
+77  2022-08-17T00:00:00.000Z   231071875  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+78  2022-08-18T00:00:00.000Z   227676010  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #84:  wiki=`en`,  period=`one-month`,  filter=`agent-type-user`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-user--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-user--one-month--monthly.csv` file:
+                      month  total.user           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z  6732995979  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z  7002382082  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #85:  wiki=`en`,  period=`one-month`,  filter=`agent-type-spider`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-spider--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--one-month--daily.csv` file:
+                       month  total.spider           timeRange.start             timeRange.end
+0   2022-06-01T00:00:00.000Z      51247757  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z
+1   2022-06-02T00:00:00.000Z      48315252  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z
+..                       ...           ...                       ...                       ...
+77  2022-08-17T00:00:00.000Z      47445839  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+78  2022-08-18T00:00:00.000Z      48258539  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #86:  wiki=`en`,  period=`one-month`,  filter=`agent-type-spider`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-spider--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-spider--one-month--monthly.csv` file:
+                      month  total.spider           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z    1496942879  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z    1438614777  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #87:  wiki=`en`,  period=`one-month`,  filter=`agent-type-automated`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-automated--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--one-month--daily.csv` file:
+                       month  total.automated           timeRange.start             timeRange.end
+0   2022-06-01T00:00:00.000Z         21852515  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z
+1   2022-06-02T00:00:00.000Z         20676215  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z
+..                       ...              ...                       ...                       ...
+77  2022-08-17T00:00:00.000Z         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+78  2022-08-18T00:00:00.000Z         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #88:  wiki=`en`,  period=`one-month`,  filter=`agent-type-automated`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-automated--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-automated--one-month--monthly.csv` file:
+                      month  total.automated           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z        668129901  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z        946223710  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #89:  wiki=`en`,  period=`one-month`,  filter=`agent-type-all`,  interval=`daily`:
+## Downloaded `english--total-page-views--agent-type-all--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--one-month--daily.csv` file:
+                       month  total.user  total.spider  total.automated           timeRange.start             timeRange.end
+0   2022-06-01T00:00:00.000Z   224819362      51247757         21852515  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z
+1   2022-06-02T00:00:00.000Z   225304222      48315252         20676215  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z
+..                       ...         ...           ...              ...                       ...                       ...
+77  2022-08-17T00:00:00.000Z   231071875      47445839         33864445  2022-08-17T00:00:00.000Z  2022-08-18T00:00:00.000Z
+78  2022-08-18T00:00:00.000Z   227676010      48258539         32645452  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z 
+
+
+
+@@ Iteration #90:  wiki=`en`,  period=`one-month`,  filter=`agent-type-all`,  interval=`monthly`:
+## Downloaded `english--total-page-views--agent-type-all--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--total-page-views--agent-type-all--one-month--monthly.csv` file:
+                      month  total.automated  total.spider  total.user           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z        668129901    1496942879  6732995979  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z        946223710    1438614777  7002382082  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+$$$ Testing: `legacy_page_views(wiki, period, filter, interval)`:
+@@ Iteration #1:  wiki=`en`,  period=`all-years`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--no-filter--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--all-years--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #2:  wiki=`en`,  period=`all-years`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--no-filter--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--all-years--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #3:  wiki=`en`,  period=`all-years`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--all-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2014-10-01T00:00:00.000Z     93988357  2014-10-01T00:00:00.000Z  2014-10-02T00:00:00.000Z
+1    2014-10-02T00:00:00.000Z     93556688  2014-10-02T00:00:00.000Z  2014-10-03T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+673  2016-08-04T00:00:00.000Z    105017763  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+674  2016-08-05T00:00:00.000Z     52864722  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #4:  wiki=`en`,  period=`all-years`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--all-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2014-10-01T00:00:00.000Z   3091546685  2014-10-01T00:00:00.000Z  2014-11-01T00:00:00.000Z
+1   2014-11-01T00:00:00.000Z   3027489668  2014-11-01T00:00:00.000Z  2014-12-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+21  2016-07-01T00:00:00.000Z   3500661121  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+22  2016-08-01T00:00:00.000Z    480041296  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #5:  wiki=`en`,  period=`all-years`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--all-years--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    189235068  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z     92037353  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #6:  wiki=`en`,  period=`all-years`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--all-years--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   5363966439  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z    913675893  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #7:  wiki=`en`,  period=`all-years`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-all--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--all-years--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #8:  wiki=`en`,  period=`all-years`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-all--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--all-years--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #9:  wiki=`en`,  period=`one-year`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--no-filter--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--one-year--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #10:  wiki=`en`,  period=`one-year`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--no-filter--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--one-year--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #11:  wiki=`en`,  period=`one-year`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--one-year--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2014-10-01T00:00:00.000Z     93988357  2014-10-01T00:00:00.000Z  2014-10-02T00:00:00.000Z
+1    2014-10-02T00:00:00.000Z     93556688  2014-10-02T00:00:00.000Z  2014-10-03T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+673  2016-08-04T00:00:00.000Z    105017763  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+674  2016-08-05T00:00:00.000Z     52864722  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #12:  wiki=`en`,  period=`one-year`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--one-year--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2014-10-01T00:00:00.000Z   3091546685  2014-10-01T00:00:00.000Z  2014-11-01T00:00:00.000Z
+1   2014-11-01T00:00:00.000Z   3027489668  2014-11-01T00:00:00.000Z  2014-12-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+21  2016-07-01T00:00:00.000Z   3500661121  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+22  2016-08-01T00:00:00.000Z    480041296  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #13:  wiki=`en`,  period=`one-year`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--one-year--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    189235068  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z     92037353  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #14:  wiki=`en`,  period=`one-year`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--one-year--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   5363966439  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z    913675893  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #15:  wiki=`en`,  period=`one-year`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-all--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--one-year--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #16:  wiki=`en`,  period=`one-year`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-all--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--one-year--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #17:  wiki=`en`,  period=`two-years`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--no-filter--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--two-years--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #18:  wiki=`en`,  period=`two-years`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--no-filter--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--two-years--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #19:  wiki=`en`,  period=`two-years`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--two-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2014-10-01T00:00:00.000Z     93988357  2014-10-01T00:00:00.000Z  2014-10-02T00:00:00.000Z
+1    2014-10-02T00:00:00.000Z     93556688  2014-10-02T00:00:00.000Z  2014-10-03T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+673  2016-08-04T00:00:00.000Z    105017763  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+674  2016-08-05T00:00:00.000Z     52864722  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #20:  wiki=`en`,  period=`two-years`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--two-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2014-10-01T00:00:00.000Z   3091546685  2014-10-01T00:00:00.000Z  2014-11-01T00:00:00.000Z
+1   2014-11-01T00:00:00.000Z   3027489668  2014-11-01T00:00:00.000Z  2014-12-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+21  2016-07-01T00:00:00.000Z   3500661121  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+22  2016-08-01T00:00:00.000Z    480041296  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #21:  wiki=`en`,  period=`two-years`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--two-years--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    189235068  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z     92037353  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #22:  wiki=`en`,  period=`two-years`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--two-years--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   5363966439  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z    913675893  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #23:  wiki=`en`,  period=`two-years`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-all--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--two-years--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #24:  wiki=`en`,  period=`two-years`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-all--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--two-years--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #25:  wiki=`en`,  period=`three-months`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--no-filter--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--three-months--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #26:  wiki=`en`,  period=`three-months`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--no-filter--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--three-months--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #27:  wiki=`en`,  period=`three-months`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--three-months--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2014-10-01T00:00:00.000Z     93988357  2014-10-01T00:00:00.000Z  2014-10-02T00:00:00.000Z
+1    2014-10-02T00:00:00.000Z     93556688  2014-10-02T00:00:00.000Z  2014-10-03T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+673  2016-08-04T00:00:00.000Z    105017763  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+674  2016-08-05T00:00:00.000Z     52864722  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #28:  wiki=`en`,  period=`three-months`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--three-months--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2014-10-01T00:00:00.000Z   3091546685  2014-10-01T00:00:00.000Z  2014-11-01T00:00:00.000Z
+1   2014-11-01T00:00:00.000Z   3027489668  2014-11-01T00:00:00.000Z  2014-12-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+21  2016-07-01T00:00:00.000Z   3500661121  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+22  2016-08-01T00:00:00.000Z    480041296  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #29:  wiki=`en`,  period=`three-months`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--three-months--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    189235068  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z     92037353  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #30:  wiki=`en`,  period=`three-months`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--three-months--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   5363966439  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z    913675893  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #31:  wiki=`en`,  period=`three-months`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-all--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--three-months--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #32:  wiki=`en`,  period=`three-months`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-all--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--three-months--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #33:  wiki=`en`,  period=`one-month`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--no-filter--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--one-month--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #34:  wiki=`en`,  period=`one-month`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--no-filter--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--no-filter--one-month--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #35:  wiki=`en`,  period=`one-month`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--one-month--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2014-10-01T00:00:00.000Z     93988357  2014-10-01T00:00:00.000Z  2014-10-02T00:00:00.000Z
+1    2014-10-02T00:00:00.000Z     93556688  2014-10-02T00:00:00.000Z  2014-10-03T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+673  2016-08-04T00:00:00.000Z    105017763  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+674  2016-08-05T00:00:00.000Z     52864722  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #36:  wiki=`en`,  period=`one-month`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-mobile-site--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-mobile-site--one-month--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2014-10-01T00:00:00.000Z   3091546685  2014-10-01T00:00:00.000Z  2014-11-01T00:00:00.000Z
+1   2014-11-01T00:00:00.000Z   3027489668  2014-11-01T00:00:00.000Z  2014-12-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+21  2016-07-01T00:00:00.000Z   3500661121  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+22  2016-08-01T00:00:00.000Z    480041296  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #37:  wiki=`en`,  period=`one-month`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--one-month--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    189235068  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z     92037353  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #38:  wiki=`en`,  period=`one-month`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-desktop-site--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-desktop-site--one-month--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   5363966439  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z    913675893  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+@@ Iteration #39:  wiki=`en`,  period=`one-month`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--legacy-page-views--access-site-all--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--one-month--daily.csv` file:
+                         month  total.total           timeRange.start             timeRange.end
+0     2007-12-09T00:00:00.000Z     41283860  2007-12-09T00:00:00.000Z  2007-12-10T00:00:00.000Z
+1     2007-12-10T00:00:00.000Z    168657418  2007-12-10T00:00:00.000Z  2007-12-11T00:00:00.000Z
+...                        ...          ...                       ...                       ...
+3146  2016-08-04T00:00:00.000Z    294252831  2016-08-04T00:00:00.000Z  2016-08-05T00:00:00.000Z
+3147  2016-08-05T00:00:00.000Z    144902075  2016-08-05T00:00:00.000Z  2016-08-06T00:00:00.000Z 
+
+
+
+@@ Iteration #40:  wiki=`en`,  period=`one-month`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--legacy-page-views--access-site-all--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--legacy-page-views--access-site-all--one-month--monthly.csv` file:
+                        month  total.total           timeRange.start             timeRange.end
+0    2007-12-01T00:00:00.000Z   2998331524  2007-12-01T00:00:00.000Z  2008-01-01T00:00:00.000Z
+1    2008-01-01T00:00:00.000Z   4930902570  2008-01-01T00:00:00.000Z  2008-02-01T00:00:00.000Z
+..                        ...          ...                       ...                       ...
+103  2016-07-01T00:00:00.000Z   8864627560  2016-07-01T00:00:00.000Z  2016-08-01T00:00:00.000Z
+104  2016-08-01T00:00:00.000Z   1393717189  2016-08-01T00:00:00.000Z  2016-09-01T00:00:00.000Z 
+
+
+
+$$$ Testing: `page_views_by_country(wiki, period, filter, interval)`:
+@@ Iteration #1:  wiki=`en`,  period=`last-month`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--page-views-by-country--no-filter--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--no-filter--last-month--daily.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000   2791604000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1        GB     2  1656633600000    748388000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+236      TK   237  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+237      KP   238  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #2:  wiki=`en`,  period=`last-month`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--page-views-by-country--no-filter--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--no-filter--last-month--monthly.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000   2791604000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1        GB     2  1656633600000    748388000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+236      TK   237  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+237      KP   238  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #3:  wiki=`en`,  period=`last-month`,  filter=`access-method-desktop`,  interval=`daily`:
+## Downloaded `english--page-views-by-country--access-method-desktop--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--access-method-desktop--last-month--daily.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000    872490000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1        GB     2  1656633600000    231845000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+235      WF   236  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+236      KP   237  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #4:  wiki=`en`,  period=`last-month`,  filter=`access-method-desktop`,  interval=`monthly`:
+## Downloaded `english--page-views-by-country--access-method-desktop--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--access-method-desktop--last-month--monthly.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000    872490000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1        GB     2  1656633600000    231845000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+235      WF   236  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+236      KP   237  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #5:  wiki=`en`,  period=`last-month`,  filter=`access-method-mobile-app`,  interval=`daily`:
+## Downloaded `english--page-views-by-country--access-method-mobile-app--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--access-method-mobile-app--last-month--daily.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000     85502000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1        GB     2  1656633600000     23734000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+228      GW   229  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+229      CF   230  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #6:  wiki=`en`,  period=`last-month`,  filter=`access-method-mobile-app`,  interval=`monthly`:
+## Downloaded `english--page-views-by-country--access-method-mobile-app--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--access-method-mobile-app--last-month--monthly.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000     85502000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1        GB     2  1656633600000     23734000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+228      GW   229  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+229      CF   230  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #7:  wiki=`en`,  period=`last-month`,  filter=`access-method-mobile-web`,  interval=`daily`:
+## Downloaded `english--page-views-by-country--access-method-mobile-web--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--access-method-mobile-web--last-month--daily.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000   1833613000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1        IN     2  1656633600000    558814000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+235      BL   236  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+236      TK   237  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #8:  wiki=`en`,  period=`last-month`,  filter=`access-method-mobile-web`,  interval=`monthly`:
+## Downloaded `english--page-views-by-country--access-method-mobile-web--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--access-method-mobile-web--last-month--monthly.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000   1833613000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1        IN     2  1656633600000    558814000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+235      BL   236  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+236      TK   237  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #9:  wiki=`en`,  period=`last-month`,  filter=`access-method-all`,  interval=`daily`:
+## Downloaded `english--page-views-by-country--access-method-all--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--access-method-all--last-month--daily.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000   2791604000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1        GB     2  1656633600000    748388000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+236      TK   237  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+237      KP   238  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #10:  wiki=`en`,  period=`last-month`,  filter=`access-method-all`,  interval=`monthly`:
+## Downloaded `english--page-views-by-country--access-method-all--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--page-views-by-country--access-method-all--last-month--monthly.csv` file:
+    country  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0        US     1  1656633600000   2791604000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1        GB     2  1656633600000    748388000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..      ...   ...            ...          ...                       ...                       ...                       ...
+236      TK   237  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+237      KP   238  1656633600000         1000  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+$$$ Testing: `unique_devices(wiki, period, filter, interval)`:
+@@ Iteration #1:  wiki=`en`,  period=`all-years`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--unique-devices--no-filter--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--all-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2020-07-01T00:00:00.000Z     68040452  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z       NaN
+1    2020-07-02T00:00:00.000Z     67789030  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+778  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+779  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #2:  wiki=`en`,  period=`all-years`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--unique-devices--no-filter--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--all-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    835087946  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    834264663  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #3:  wiki=`en`,  period=`all-years`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-mobile-site--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--all-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2020-07-01T00:00:00.000Z     45635674  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z       NaN
+1    2020-07-02T00:00:00.000Z     45435891  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+778  2022-08-18T00:00:00.000Z     41827780  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+779  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #4:  wiki=`en`,  period=`all-years`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-mobile-site--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--all-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    589910866  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    598783769  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    538610452  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    548283755  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #5:  wiki=`en`,  period=`all-years`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-desktop-site--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--all-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2020-07-01T00:00:00.000Z     22404778  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z       NaN
+1    2020-07-02T00:00:00.000Z     22353139  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+778  2022-08-18T00:00:00.000Z     22405437  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+779  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #6:  wiki=`en`,  period=`all-years`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-desktop-site--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--all-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    245177080  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    235480894  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    259443350  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    223420262  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #7:  wiki=`en`,  period=`all-years`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-all--all-years--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--all-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2020-07-01T00:00:00.000Z     68040452  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z       NaN
+1    2020-07-02T00:00:00.000Z     67789030  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+778  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+779  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #8:  wiki=`en`,  period=`all-years`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-all--all-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--all-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    835087946  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    834264663  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #9:  wiki=`en`,  period=`one-year`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--unique-devices--no-filter--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--one-year--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2021-07-01T00:00:00.000Z     66635390  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z       NaN
+1    2021-07-02T00:00:00.000Z     65034241  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+413  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+414  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #10:  wiki=`en`,  period=`one-year`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--unique-devices--no-filter--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--one-year--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z    783460679  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z    796812745  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #11:  wiki=`en`,  period=`one-year`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-mobile-site--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--one-year--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2021-07-01T00:00:00.000Z     44250015  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z       NaN
+1    2021-07-02T00:00:00.000Z     44184592  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+413  2022-08-18T00:00:00.000Z     41827780  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+414  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #12:  wiki=`en`,  period=`one-year`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-mobile-site--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--one-year--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z    559666563  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z    554820116  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z    538610452  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z    548283755  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #13:  wiki=`en`,  period=`one-year`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-desktop-site--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--one-year--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2021-07-01T00:00:00.000Z     22385375  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z       NaN
+1    2021-07-02T00:00:00.000Z     20849649  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+413  2022-08-18T00:00:00.000Z     22405437  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+414  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #14:  wiki=`en`,  period=`one-year`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-desktop-site--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--one-year--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z    223794116  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z    241992629  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z    259443350  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z    223420262  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #15:  wiki=`en`,  period=`one-year`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-all--one-year--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--one-year--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2021-07-01T00:00:00.000Z     66635390  2021-07-01T00:00:00.000Z  2021-07-02T00:00:00.000Z       NaN
+1    2021-07-02T00:00:00.000Z     65034241  2021-07-02T00:00:00.000Z  2021-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+413  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+414  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #16:  wiki=`en`,  period=`one-year`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-all--one-year--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--one-year--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2021-07-01T00:00:00.000Z    783460679  2021-07-01T00:00:00.000Z  2021-08-01T00:00:00.000Z
+1   2021-08-01T00:00:00.000Z    796812745  2021-08-01T00:00:00.000Z  2021-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+11  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+12  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #17:  wiki=`en`,  period=`two-years`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--unique-devices--no-filter--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--two-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2020-07-01T00:00:00.000Z     68040452  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z       NaN
+1    2020-07-02T00:00:00.000Z     67789030  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+778  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+779  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #18:  wiki=`en`,  period=`two-years`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--unique-devices--no-filter--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--two-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    835087946  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    834264663  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #19:  wiki=`en`,  period=`two-years`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-mobile-site--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--two-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2020-07-01T00:00:00.000Z     45635674  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z       NaN
+1    2020-07-02T00:00:00.000Z     45435891  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+778  2022-08-18T00:00:00.000Z     41827780  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+779  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #20:  wiki=`en`,  period=`two-years`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-mobile-site--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--two-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    589910866  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    598783769  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    538610452  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    548283755  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #21:  wiki=`en`,  period=`two-years`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-desktop-site--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--two-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2020-07-01T00:00:00.000Z     22404778  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z       NaN
+1    2020-07-02T00:00:00.000Z     22353139  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+778  2022-08-18T00:00:00.000Z     22405437  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+779  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #22:  wiki=`en`,  period=`two-years`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-desktop-site--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--two-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    245177080  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    235480894  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    259443350  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    223420262  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #23:  wiki=`en`,  period=`two-years`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-all--two-years--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--two-years--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2020-07-01T00:00:00.000Z     68040452  2020-07-01T00:00:00.000Z  2020-07-02T00:00:00.000Z       NaN
+1    2020-07-02T00:00:00.000Z     67789030  2020-07-02T00:00:00.000Z  2020-07-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+778  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+779  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #24:  wiki=`en`,  period=`two-years`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-all--two-years--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--two-years--monthly.csv` file:
+                       month  total.total           timeRange.start             timeRange.end
+0   2020-07-01T00:00:00.000Z    835087946  2020-07-01T00:00:00.000Z  2020-08-01T00:00:00.000Z
+1   2020-08-01T00:00:00.000Z    834264663  2020-08-01T00:00:00.000Z  2020-09-01T00:00:00.000Z
+..                       ...          ...                       ...                       ...
+23  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+24  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #25:  wiki=`en`,  period=`three-months`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--unique-devices--no-filter--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--three-months--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2022-04-01T00:00:00.000Z     63633778  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z       NaN
+1    2022-04-02T00:00:00.000Z     61327573  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+139  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+140  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #26:  wiki=`en`,  period=`three-months`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--unique-devices--no-filter--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--three-months--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z    794589096  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z    827718367  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #27:  wiki=`en`,  period=`three-months`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-mobile-site--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--three-months--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2022-04-01T00:00:00.000Z     41155310  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z       NaN
+1    2022-04-02T00:00:00.000Z     44196537  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+139  2022-08-18T00:00:00.000Z     41827780  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+140  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #28:  wiki=`en`,  period=`three-months`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-mobile-site--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--three-months--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z    541881270  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z    556808906  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z    538610452  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z    548283755  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #29:  wiki=`en`,  period=`three-months`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-desktop-site--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--three-months--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2022-04-01T00:00:00.000Z     22478468  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z       NaN
+1    2022-04-02T00:00:00.000Z     17131036  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+139  2022-08-18T00:00:00.000Z     22405437  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+140  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #30:  wiki=`en`,  period=`three-months`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-desktop-site--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--three-months--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z    252707826  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z    270909461  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z    259443350  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z    223420262  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #31:  wiki=`en`,  period=`three-months`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-all--three-months--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--three-months--daily.csv` file:
+                        month  total.total           timeRange.start             timeRange.end truncated
+0    2022-04-01T00:00:00.000Z     63633778  2022-04-01T00:00:00.000Z  2022-04-02T00:00:00.000Z       NaN
+1    2022-04-02T00:00:00.000Z     61327573  2022-04-02T00:00:00.000Z  2022-04-03T00:00:00.000Z       NaN
+..                        ...          ...                       ...                       ...       ...
+139  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+140  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #32:  wiki=`en`,  period=`three-months`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-all--three-months--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--three-months--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-04-01T00:00:00.000Z    794589096  2022-04-01T00:00:00.000Z  2022-05-01T00:00:00.000Z
+1  2022-05-01T00:00:00.000Z    827718367  2022-05-01T00:00:00.000Z  2022-06-01T00:00:00.000Z
+2  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+3  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #33:  wiki=`en`,  period=`one-month`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--unique-devices--no-filter--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--one-month--daily.csv` file:
+                       month  total.total           timeRange.start             timeRange.end truncated
+0   2022-06-01T00:00:00.000Z     64175975  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z       NaN
+1   2022-06-02T00:00:00.000Z     64329577  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z       NaN
+..                       ...          ...                       ...                       ...       ...
+78  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+79  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #34:  wiki=`en`,  period=`one-month`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--unique-devices--no-filter--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--no-filter--one-month--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #35:  wiki=`en`,  period=`one-month`,  filter=`access-site-mobile-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-mobile-site--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--one-month--daily.csv` file:
+                       month  total.total           timeRange.start             timeRange.end truncated
+0   2022-06-01T00:00:00.000Z     40903906  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z       NaN
+1   2022-06-02T00:00:00.000Z     41234694  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z       NaN
+..                       ...          ...                       ...                       ...       ...
+78  2022-08-18T00:00:00.000Z     41827780  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+79  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #36:  wiki=`en`,  period=`one-month`,  filter=`access-site-mobile-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-mobile-site--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-mobile-site--one-month--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z    538610452  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z    548283755  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #37:  wiki=`en`,  period=`one-month`,  filter=`access-site-desktop-site`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-desktop-site--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--one-month--daily.csv` file:
+                       month  total.total           timeRange.start             timeRange.end truncated
+0   2022-06-01T00:00:00.000Z     23272069  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z       NaN
+1   2022-06-02T00:00:00.000Z     23094883  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z       NaN
+..                       ...          ...                       ...                       ...       ...
+78  2022-08-18T00:00:00.000Z     22405437  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+79  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #38:  wiki=`en`,  period=`one-month`,  filter=`access-site-desktop-site`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-desktop-site--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-desktop-site--one-month--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z    259443350  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z    223420262  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #39:  wiki=`en`,  period=`one-month`,  filter=`access-site-all`,  interval=`daily`:
+## Downloaded `english--unique-devices--access-site-all--one-month--daily.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--one-month--daily.csv` file:
+                       month  total.total           timeRange.start             timeRange.end truncated
+0   2022-06-01T00:00:00.000Z     64175975  2022-06-01T00:00:00.000Z  2022-06-02T00:00:00.000Z       NaN
+1   2022-06-02T00:00:00.000Z     64329577  2022-06-02T00:00:00.000Z  2022-06-03T00:00:00.000Z       NaN
+..                       ...          ...                       ...                       ...       ...
+78  2022-08-18T00:00:00.000Z     64233217  2022-08-18T00:00:00.000Z  2022-08-19T00:00:00.000Z       NaN
+79  2022-08-19T00:00:00.000Z            0  2022-08-19T00:00:00.000Z  2022-08-20T00:00:00.000Z      True 
+
+
+
+@@ Iteration #40:  wiki=`en`,  period=`one-month`,  filter=`access-site-all`,  interval=`monthly`:
+## Downloaded `english--unique-devices--access-site-all--one-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--unique-devices--access-site-all--one-month--monthly.csv` file:
+                      month  total.total           timeRange.start             timeRange.end
+0  2022-06-01T00:00:00.000Z    798053802  2022-06-01T00:00:00.000Z  2022-07-01T00:00:00.000Z
+1  2022-07-01T00:00:00.000Z    771704017  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+$$$ Testing: `top_viewed_articles(wiki, period, filter, interval)`:
+@@ Iteration #1:  wiki=`en`,  period=`last-month`,  filter=`no-filter`,  interval=`daily`:
+## Downloaded `english--top-viewed-articles--no-filter--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--no-filter--last-month--daily.csv` file:
+                              article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0                           Main_Page     1  1656633600000      4267652  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1                      Special:Search     2  1656633600000      1220423  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..                                ...   ...            ...          ...                       ...                       ...                       ...
+998                     John_Travolta   999  1656633600000         9129  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+999  Prince_Philip,_Duke_of_Edinburgh  1000  1656633600000         9127  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #2:  wiki=`en`,  period=`last-month`,  filter=`no-filter`,  interval=`monthly`:
+## Downloaded `english--top-viewed-articles--no-filter--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--no-filter--last-month--monthly.csv` file:
+                           article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0                        Main_Page     1  1656633600000    147261022  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1                   Special:Search     2  1656633600000     38338131  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..                             ...   ...            ...          ...                       ...                       ...                       ...
+998  Explosively_formed_penetrator   999  1656633600000       272449  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+999                 Michael_J._Fox  1000  1656633600000       272364  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #3:  wiki=`en`,  period=`last-month`,  filter=`access-method-desktop`,  interval=`daily`:
+## Downloaded `english--top-viewed-articles--access-method-desktop--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--access-method-desktop--last-month--daily.csv` file:
+                   article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0                Main_Page     1  1656633600000      1626839  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1           Special:Search     2  1656633600000       631309  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..                     ...   ...            ...          ...                       ...                       ...                       ...
+998           Chris_Martin   999  1656633600000         2317  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+999  Television_production  1000  1656633600000         2316  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #4:  wiki=`en`,  period=`last-month`,  filter=`access-method-desktop`,  interval=`monthly`:
+## Downloaded `english--top-viewed-articles--access-method-desktop--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--access-method-desktop--last-month--monthly.csv` file:
+            article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0         Main_Page     1  1656633600000     63954978  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1    Special:Search     2  1656633600000     19895738  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..              ...   ...            ...          ...                       ...                       ...                       ...
+998           Jesus   999  1656633600000        79563  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+999   Justin_Bieber  1000  1656633600000        79492  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #5:  wiki=`en`,  period=`last-month`,  filter=`access-method-mobile-app`,  interval=`daily`:
+## Downloaded `english--top-viewed-articles--access-method-mobile-app--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--access-method-mobile-app--last-month--daily.csv` file:
+                    article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0               Ivana_Trump     1  1656633600000        19972  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1    Danzig_Street_shooting     2  1656633600000        16051  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..                      ...   ...            ...          ...                       ...                       ...                       ...
+993       Master_of_Puppets   994  1656633600000          264  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+994            Led_Zeppelin   995  1656633600000          264  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #6:  wiki=`en`,  period=`last-month`,  filter=`access-method-mobile-app`,  interval=`monthly`:
+## Downloaded `english--top-viewed-articles--access-method-mobile-app--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--access-method-mobile-app--last-month--monthly.csv` file:
+                    article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0            Deaths_in_2022     1  1656633600000       286350  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1    Thor:_Love_and_Thunder     2  1656633600000       261954  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..                      ...   ...            ...          ...                       ...                       ...                       ...
+997                 Belgium   998  1656633600000         7368  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+998  American_Psycho_(film)   999  1656633600000         7366  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #7:  wiki=`en`,  period=`last-month`,  filter=`access-method-mobile-web`,  interval=`daily`:
+## Downloaded `english--top-viewed-articles--access-method-mobile-web--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--access-method-mobile-web--last-month--daily.csv` file:
+             article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0          Main_Page     1  1656633600000      2639655  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1     Special:Search     2  1656633600000       589114  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..               ...   ...            ...          ...                       ...                       ...                       ...
+998          Titanic   999  1656633600000         6754  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+999  Sahith_Theegala  1000  1656633600000         6747  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #8:  wiki=`en`,  period=`last-month`,  filter=`access-method-mobile-web`,  interval=`monthly`:
+## Downloaded `english--top-viewed-articles--access-method-mobile-web--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--access-method-mobile-web--last-month--monthly.csv` file:
+                 article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0              Main_Page     1  1656633600000     83260507  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1         Special:Search     2  1656633600000     18442393  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..                   ...   ...            ...          ...                       ...                       ...                       ...
+998  Titanic_(1997_film)   999  1656633600000       191309  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+999           Logan_Paul  1000  1656633600000       191306  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+
+@@ Iteration #9:  wiki=`en`,  period=`last-month`,  filter=`access-method-all`,  interval=`daily`:
+## Downloaded `english--top-viewed-articles--access-method-all--last-month--daily.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--access-method-all--last-month--daily.csv` file:
+                              article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0                           Main_Page     1  1656633600000      4267652  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+1                      Special:Search     2  1656633600000      1220423  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+..                                ...   ...            ...          ...                       ...                       ...                       ...
+998                     John_Travolta   999  1656633600000         9129  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z
+999  Prince_Philip,_Duke_of_Edinburgh  1000  1656633600000         9127  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-07-02T00:00:00.000Z 
+
+
+
+@@ Iteration #10:  wiki=`en`,  period=`last-month`,  filter=`access-method-all`,  interval=`monthly`:
+## Downloaded `english--top-viewed-articles--access-method-all--last-month--monthly.csv` successfully :-)
+
+** Quick glance at `english--top-viewed-articles--access-method-all--last-month--monthly.csv` file:
+                           article  rank      timestamp  total.total                     month           timeRange.start             timeRange.end
+0                        Main_Page     1  1656633600000    147261022  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+1                   Special:Search     2  1656633600000     38338131  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+..                             ...   ...            ...          ...                       ...                       ...                       ...
+998  Explosively_formed_penetrator   999  1656633600000       272449  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z
+999                 Michael_J._Fox  1000  1656633600000       272364  2022-07-01T00:00:00.000Z  2022-07-01T00:00:00.000Z  2022-08-01T00:00:00.000Z 
+
+
+

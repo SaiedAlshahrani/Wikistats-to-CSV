@@ -4,4 +4,4 @@
           ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║WIKISTATS-TO-CSV║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
           ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
 
-Wikistats-to-CSV tool downloads Wikipedia Statistics in CSV format.
+Wikistats-to-CSV downloads Wikipedia Statistics in CSV format.

@@ -5,7 +5,7 @@ from time import sleep
 from selenium import webdriver
 
 
-class Content:
+class Content_Metrics:
 
     def absolute_bytes_difference(wiki, period, filter, interval):
         try:
@@ -26,7 +26,7 @@ class Content:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/absolute-bytes-diff/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -69,7 +69,7 @@ class Content:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
-        #finally: exit()
+        finally: exit()
 
         
     def edited_pages(wiki, period, filter, interval):
@@ -93,7 +93,7 @@ class Content:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
             
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/edited-pages/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -136,7 +136,7 @@ class Content:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
-        #finally: exit()
+        finally: exit()
 
            
     def net_bytes_difference(wiki, period, filter, interval):
@@ -158,7 +158,7 @@ class Content:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/net-bytes-difference/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -201,7 +201,7 @@ class Content:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
-        #finally: exit()
+        finally: exit()
 
 
     def pages_to_date(wiki, period, filter, interval):
@@ -223,7 +223,7 @@ class Content:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/pages-to-date/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -270,9 +270,7 @@ class Content:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
         
-
-            
-        # #finally: exit()
+        finally: exit()
 
 
     def total_media_requests(wiki, period, filter, interval):
@@ -294,7 +292,7 @@ class Content:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/total-mediarequests/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -337,7 +335,7 @@ class Content:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
-        #finally: exit()
+        finally: exit()
 
               
     def top_media_requests(wiki, period, filter, interval):
@@ -361,7 +359,7 @@ class Content:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/top-mediarequests/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -404,4 +402,4 @@ class Content:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
             
-        #finally: exit()
+        finally: exit()

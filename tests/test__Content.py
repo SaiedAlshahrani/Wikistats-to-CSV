@@ -1,11 +1,11 @@
-from Content import *
 from Helper import *
+from Content import *
 from itertools import islice
 
 
 def absolute_bytes_difference__test():
     wikis = Helper.get_Wikis_Codes()
-    # wikis = {'ar':'Arabic'}
+    # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
     filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
@@ -22,13 +22,13 @@ def absolute_bytes_difference__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content.absolute_bytes_difference(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content_Metrics.absolute_bytes_difference(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
 def edited_pages__test():
     wikis = Helper.get_Wikis_Codes()
-    # wikis = {'ar':'Arabic'}
+    # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
     filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
@@ -47,13 +47,13 @@ def edited_pages__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content.edited_pages(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content_Metrics.edited_pages(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
 def net_bytes_difference__test():
     wikis = Helper.get_Wikis_Codes()
-    # wikis = {'ar':'Arabic'}
+    # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
     filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
@@ -70,13 +70,13 @@ def net_bytes_difference__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content.net_bytes_difference(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content_Metrics.net_bytes_difference(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
 def pages_to_date__test():
     wikis = Helper.get_Wikis_Codes()
-    # wikis = {'ar':'Arabic'}
+    # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
     filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
@@ -93,13 +93,13 @@ def pages_to_date__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content.pages_to_date(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content_Metrics.pages_to_date(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
 def total_media_requests__test():
     wikis = Helper.get_Wikis_Codes()
-    # wikis = {'ar':'Arabic'}
+    # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
     filters = {'no-filter':'~total', 'media-type-image':'media_type~image', 'media-type-video':'media_type~video', 'media-type-audio':'media_type~audio', 
@@ -116,13 +116,13 @@ def total_media_requests__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content.total_media_requests(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content_Metrics.total_media_requests(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
 def top_media_requests__test():
     wikis = Helper.get_Wikis_Codes()
-    # wikis = {'ar':'Arabic'}
+    # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'last-month':'last-month'}
     filters = {'no-filter':'~total', 'media-type-image':'(media_type)~image', 'media-type-video':'(media_type)~video', 'media-type-audio':'(media_type)~audio', 
@@ -138,7 +138,7 @@ def top_media_requests__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content.top_media_requests(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content_Metrics.top_media_requests(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 

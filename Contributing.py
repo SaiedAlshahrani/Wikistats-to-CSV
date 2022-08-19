@@ -5,7 +5,7 @@ from time import sleep
 from selenium import webdriver
 
 
-class Contributing:
+class Contributing_Metrics:
 
     def editors(wiki, period, filter, interval):
         try:
@@ -28,7 +28,7 @@ class Contributing:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/contributing/editors/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -75,6 +75,8 @@ class Contributing:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
         
+        finally: exit()
+
 
     def active_editors(wiki, period, filter, interval):
         try:
@@ -93,7 +95,7 @@ class Contributing:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/contributing/active-editors/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -139,7 +141,9 @@ class Contributing:
                 print('## Error: there is no data available for this date range on this Wikipedia.\n')
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
- 
+        
+        finally: exit()
+
 
     def edits(wiki, period, filter, interval):
         try:
@@ -160,7 +164,7 @@ class Contributing:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/contributing/edits/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -207,6 +211,8 @@ class Contributing:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
 
+        finally: exit()
+
 
     def user_edits(wiki, period, filter, interval):
         try:
@@ -225,7 +231,7 @@ class Contributing:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/contributing/user-edits/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -272,6 +278,8 @@ class Contributing:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
 
+        finally: exit()
+
 
     def new_pages(wiki, period, filter, interval):
         try:
@@ -292,7 +300,7 @@ class Contributing:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/contributing/new-pages/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -339,6 +347,8 @@ class Contributing:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
 
+        finally: exit()
+
 
     def new_registered_users(wiki, period, filter, interval):
         try:
@@ -357,7 +367,7 @@ class Contributing:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/contributing/new-registered-users/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -403,6 +413,8 @@ class Contributing:
                 print('## Error: there is no data available for this date range on this Wikipedia.\n')
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
+        
+        finally: exit()
 
 
     def top_editors(wiki, period, filter, interval):
@@ -427,7 +439,7 @@ class Contributing:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/contributing/top-editors/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -474,6 +486,8 @@ class Contributing:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
         
+        finally: exit()
+        
 
     def top_edited_pages(wiki, period, filter, interval):
         try:
@@ -497,7 +511,7 @@ class Contributing:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/contributing/top-edited-pages/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
@@ -544,6 +558,8 @@ class Contributing:
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
         
+        finally: exit()
+       
 
     def active_editors_by_country(wiki, period, filter, interval):
         try:
@@ -565,7 +581,7 @@ class Contributing:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver')
+            driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
 
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/contributing/active-editors-by-country/full|table|'
             if filter=='activity-level-5-to-99-edits':
@@ -616,3 +632,5 @@ class Contributing:
                 print('## Error: there is no data available for this date range on this Wikipedia.\n')
             else:  
                 print(f"## Error: something unknown went wrong!! Please, try again!!\n")
+
+        finally: exit()
