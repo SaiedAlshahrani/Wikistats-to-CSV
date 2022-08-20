@@ -1,9 +1,9 @@
 # Wikistats-to-CSV
 
 ```
-▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
-▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║WIKISTATS-TO-CSV║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
-▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
+              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
+              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║WIKISTATS-TO-CSV║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
+              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
 ```
 
 Wikistats-to-CSV is a Python package/wrapper and command line interface (CLI) that downloads Wikipedia Statistics for a given Wikipedia in a format of CSV  from [Wikimedia Statistics](https://stats.wikimedia.org) project. 
@@ -28,7 +28,7 @@ $ wikistats2csv --wiki en --metric content --query pages-to-date --period all-ye
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║WIKISTATS-TO-CSV║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
-            
+
 ## Downloaded `english--pages-to-date--page-type-all--all-years--monthly.csv` successfully :-)
 
 ** Quick glance at `english--pages-to-date--page-type-all--all-years--monthly.csv` file:
@@ -48,7 +48,7 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║WIKISTATS-TO-CSV║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
-            
+
 ## Downloaded `arabic--pages-to-date--page-type-all--all-years--monthly.csv` successfully :-)
 
 ** Quick glance at `arabic--pages-to-date--page-type-all--all-years--monthly.csv` file:
