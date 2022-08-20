@@ -1,12 +1,13 @@
+import os
 import rich
+import pandas
 import selenium
-import os , pandas
-from Helper import *
 from time import sleep
+from .helper import Helper
 from selenium import webdriver
 
 
-class Reading_Metrics:
+class Reading:
 
     def total_page_views(wiki, period, filter, interval):
         try:
@@ -14,11 +15,11 @@ class Reading_Metrics:
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
-            filters = {'no-filter':'~total', 'access-method-desktop':'access~desktop', 'access-method-mobile-app':'access~mobile-app', 
-                       'access-method-mobile-web':'access~mobile-web', 'access-method-all':'access~desktop*mobile-app*mobile-web', 
-                       'agent-type-user':'agent~user', 'agent-type-spider':'agent~spider', 'agent-type-automated':'agent~automated', 
+            filters = {'no-filter':'~total', 'access-method-desktop':'access~desktop', 'access-method-mobile-app':'access~mobile-app',
+                       'access-method-mobile-web':'access~mobile-web', 'access-method-all':'access~desktop*mobile-app*mobile-web',
+                       'agent-type-user':'agent~user', 'agent-type-spider':'agent~spider', 'agent-type-automated':'agent~automated',
                        'agent-type-all':'agent~user*spider*automated'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -33,9 +34,9 @@ class Reading_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/total-page-views/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -50,12 +51,12 @@ class Reading_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-             
+
         except KeyError:
            print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
 
@@ -63,7 +64,7 @@ class Reading_Metrics:
            print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
 
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -74,13 +75,13 @@ class Reading_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
 
 
@@ -92,7 +93,7 @@ class Reading_Metrics:
 
             filters = {'no-filter':'~total', 'access-site-mobile-site':'(access-site)~mobile-site', 'access-site-desktop-site':
                        '(access-site)~desktop-site', 'access-site-all':'(access-site)~mobile-site*desktop-site'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -107,9 +108,9 @@ class Reading_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/legacy-page-views/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -124,14 +125,14 @@ class Reading_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-             
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -142,13 +143,13 @@ class Reading_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
 
 
@@ -163,7 +164,7 @@ class Reading_Metrics:
 
             filters = {'no-filter':'~total', 'access-method-desktop':'(access)~desktop', 'access-method-mobile-app':'(access)~mobile-app',
                        'access-method-mobile-web':'(access)~mobile-web', 'access-method-all':'(access)~desktop*mobile-app*mobile-web'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -178,9 +179,9 @@ class Reading_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/page-views-by-country/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -195,14 +196,14 @@ class Reading_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-             
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -213,13 +214,13 @@ class Reading_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
 
 
@@ -231,7 +232,7 @@ class Reading_Metrics:
 
             filters = {'no-filter':'~total', 'access-site-mobile-site':'(access-site)~mobile-site', 'access-site-desktop-site':
                        '(access-site)~desktop-site', 'access-site-all':'(access-site)~mobile-site*desktop-site'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -246,9 +247,9 @@ class Reading_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/unique-devices/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -263,14 +264,14 @@ class Reading_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-             
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -281,13 +282,13 @@ class Reading_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
 
 
@@ -302,7 +303,7 @@ class Reading_Metrics:
 
             filters = {'no-filter':'~total', 'access-method-desktop':'(access)~desktop', 'access-method-mobile-app':'(access)~mobile-app',
                        'access-method-mobile-web':'(access)~mobile-web', 'access-method-all':'(access)~desktop*mobile-app*mobile-web'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -317,9 +318,9 @@ class Reading_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/reading/top-viewed-articles/normal|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -334,14 +335,14 @@ class Reading_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-             
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -352,11 +353,11 @@ class Reading_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()

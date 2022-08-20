@@ -1,12 +1,13 @@
+import os
 import rich
+import pandas
 import selenium
-import os , pandas
-from Helper import *
 from time import sleep
+from .helper import Helper
 from selenium import webdriver
 
 
-class Content_Metrics:
+class Content:
 
     def absolute_bytes_difference(wiki, period, filter, interval):
         try:
@@ -14,10 +15,10 @@ class Content_Metrics:
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
-            filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
+            filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content',
                        'editor-type-user':'editor_type~user', 'editor-type-name-bot':'editor_type~name-bot', 'editor-type-anonymous':'editor_type~anonymous', 'editor-type-group-bot':
                        'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -32,9 +33,9 @@ class Content_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/absolute-bytes-diff/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -49,14 +50,14 @@ class Content_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-                         
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -67,28 +68,28 @@ class Content_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
 
-        
+
     def edited_pages(wiki, period, filter, interval):
         try:
             wikis = Helper.get_Wikis_Codes()
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
-            filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
+            filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content',
                        'editor-type-user':'editor_type~user', 'editor-type-name-bot':'editor_type~name-bot', 'editor-type-anonymous':'editor_type~anonymous', 'editor-type-group-bot':
-                       'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user', 'activity-level-1-to-4-edits':'activity_level~1..4-edits', 
-                       'activity-level-5-to-24-edits':'activity_level~5..24-edits', 'activity-level-25-to-99-edits':'activity_level~25..99-edits', 
+                       'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user', 'activity-level-1-to-4-edits':'activity_level~1..4-edits',
+                       'activity-level-5-to-24-edits':'activity_level~5..24-edits', 'activity-level-25-to-99-edits':'activity_level~25..99-edits',
                         'activity-level-100-or-more-edits':'activity_level~100..-edits', 'activity-level-all':'activity_level~1..4-edits*5..24-edits*25..99-edits*100..-edits'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -99,13 +100,13 @@ class Content_Metrics:
             profile.set_preference("browser.download.dir", f"{os.getcwd()}")
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
             driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path='geckodriver', service_log_path=os.devnull)
-            
+
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/edited-pages/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -120,14 +121,14 @@ class Content_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-            
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -138,26 +139,26 @@ class Content_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
 
-           
+
     def net_bytes_difference(wiki, period, filter, interval):
         try:
             wikis = Helper.get_Wikis_Codes()
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
-            filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
+            filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content',
                        'editor-type-user':'editor_type~user', 'editor-type-name-bot':'editor_type~name-bot', 'editor-type-anonymous':'editor_type~anonymous', 'editor-type-group-bot':
                        'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -172,9 +173,9 @@ class Content_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/net-bytes-difference/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -189,14 +190,14 @@ class Content_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-             
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -207,13 +208,13 @@ class Content_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
 
 
@@ -223,10 +224,10 @@ class Content_Metrics:
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
-            filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
+            filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content',
                        'editor-type-user':'editor_type~user', 'editor-type-name-bot':'editor_type~name-bot', 'editor-type-anonymous':'editor_type~anonymous', 'editor-type-group-bot':
                        'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -241,9 +242,9 @@ class Content_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/pages-to-date/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -258,14 +259,14 @@ class Content_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-        
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -276,13 +277,13 @@ class Content_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
 
 
@@ -292,10 +293,10 @@ class Content_Metrics:
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
-            filters = {'no-filter':'~total', 'media-type-image':'media_type~image', 'media-type-video':'media_type~video', 'media-type-audio':'media_type~audio', 
-                       'media-type-document':'media_type~document', 'media-type-other':'media_type~other', 'media-type-all':'media_type~image*video*audio*document*other', 
+            filters = {'no-filter':'~total', 'media-type-image':'media_type~image', 'media-type-video':'media_type~video', 'media-type-audio':'media_type~audio',
+                       'media-type-document':'media_type~document', 'media-type-other':'media_type~other', 'media-type-all':'media_type~image*video*audio*document*other',
                        'agent-type-user':'agent~user', 'agent-type-spider':'agent~spider', 'agent-type-all':'agent~user*spider'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -310,9 +311,9 @@ class Content_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/total-mediarequests/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -327,14 +328,14 @@ class Content_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-             
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -345,16 +346,16 @@ class Content_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
 
-              
+
     def top_media_requests(wiki, period, filter, interval):
         try:
             wikis = Helper.get_Wikis_Codes()
@@ -364,9 +365,9 @@ class Content_Metrics:
             if period not in periods:
                 periods.update({period:period})
 
-            filters = {'no-filter':'~total', 'media-type-image':'(media_type)~image', 'media-type-video':'(media_type)~video', 'media-type-audio':'(media_type)~audio', 
+            filters = {'no-filter':'~total', 'media-type-image':'(media_type)~image', 'media-type-video':'(media_type)~video', 'media-type-audio':'(media_type)~audio',
                        'media-type-document':'(media_type)~document', 'media-type-other':'(media_type)~other', 'media-type-all':'(media_type)~image*video*audio*document*other'}
-            
+
             intervals = {'daily':'daily', 'monthly':'monthly'}
 
             options = webdriver.FirefoxOptions()
@@ -381,9 +382,9 @@ class Content_Metrics:
             base_url = f'https://stats.wikimedia.org/#/{wiki}.wikipedia.org/content/top-mediarequests/full|table|'
             parameters = f'{periods[period]}|{filters[filter]}|{intervals[interval]}'
             request_url = "".join([base_url, parameters])
-            
+
             driver.implicitly_wait(5)
-            driver.get(request_url) 
+            driver.get(request_url)
             html = driver.page_source
 
             if intervals[interval]=='daily':
@@ -398,14 +399,14 @@ class Content_Metrics:
 
             print(f"## Downloaded `{csvFile}` successfully :-)\n")
             print(f"** Quick glance at `{csvFile}` file:")
-            readCSVfile = pandas.read_csv(csvFile) 
+            readCSVfile = pandas.read_csv(csvFile)
             print(readCSVfile.to_string(max_rows=5), '\n')
 
             driver.close()
             driver.quit()
-             
+
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
@@ -416,11 +417,11 @@ class Content_Metrics:
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:  
+            else:
                 rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-        
+
         finally: exit()
