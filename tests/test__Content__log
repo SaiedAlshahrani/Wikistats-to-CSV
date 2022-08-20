@@ -4714,7 +4714,8 @@ https://stats.wikimedia.org/#/en.wikipedia.org/content/pages-to-date/full|table|
 
 
 @@ Iteration #61:  wiki=`en`,  period=`three-months`,  filter=`page-type-all`,  interval=`daily`:
-## Error: something unknown went wrong!! Please, try again!!
+## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:
+https://stats.wikimedia.org/#/en.wikipedia.org/content/pages-to-date/full|table|3-month|page_type~content*non-content|daily 
 
 
 

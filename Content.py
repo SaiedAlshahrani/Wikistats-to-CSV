@@ -1,3 +1,4 @@
+import rich
 import selenium
 import os , pandas
 from Helper import *
@@ -54,21 +55,25 @@ class Content_Metrics:
             driver.close()
             driver.quit()
                          
+        except KeyboardInterrupt:
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            exit()
+
         except KeyError:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                print('## Error: there is no data available for this date range on this Wikipedia.\n')
+                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
             else:  
-                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
-            
+                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+        
         finally: exit()
 
         
@@ -121,21 +126,25 @@ class Content_Metrics:
             driver.close()
             driver.quit()
             
+        except KeyboardInterrupt:
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            exit()
+
         except KeyError:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                print('## Error: there is no data available for this date range on this Wikipedia.\n')
+                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
             else:  
-                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
-            
+                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+        
         finally: exit()
 
            
@@ -186,21 +195,25 @@ class Content_Metrics:
             driver.close()
             driver.quit()
              
+        except KeyboardInterrupt:
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            exit()
+
         except KeyError:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                print('## Error: there is no data available for this date range on this Wikipedia.\n')
+                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
             else:  
-                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
-            
+                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+        
         finally: exit()
 
 
@@ -252,23 +265,23 @@ class Content_Metrics:
             driver.quit()
         
         except KeyboardInterrupt:
-            print(f"## Error: exiting due to pressing ctrl-c ...\n")            
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
             exit()
 
         except KeyError:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                print('## Error: there is no data available for this date range on this Wikipedia.\n')
+                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
             else:  
-                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
+                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
         
         finally: exit()
 
@@ -320,21 +333,25 @@ class Content_Metrics:
             driver.close()
             driver.quit()
              
+        except KeyboardInterrupt:
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            exit()
+
         except KeyError:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                print('## Error: there is no data available for this date range on this Wikipedia.\n')
+                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
             else:  
-                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
-            
+                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+        
         finally: exit()
 
               
@@ -387,19 +404,23 @@ class Content_Metrics:
             driver.close()
             driver.quit()
              
+        except KeyboardInterrupt:
+            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")            
+            exit()
+
         except KeyError:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           print(f"## Error: one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.\n")
+           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                print('## Error: cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:')                
+                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")                
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                print('## Error: there is no data available for this date range on this Wikipedia.\n')
+                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
             else:  
-                print(f"## Error: something unknown went wrong!! Please, try again!!\n")
-            
+                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+        
         finally: exit()
