@@ -23,7 +23,7 @@ def total_page_views__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Reading_Metrics.total_page_views(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Reading.total_page_views(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -45,7 +45,7 @@ def legacy_page_views__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Reading_Metrics.legacy_page_views(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Reading.legacy_page_views(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -67,7 +67,7 @@ def page_views_by_country__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Reading_Metrics.page_views_by_country(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Reading.page_views_by_country(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -89,7 +89,7 @@ def unique_devices__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Reading_Metrics.unique_devices(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Reading.unique_devices(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -111,7 +111,7 @@ def top_viewed_articles__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Reading_Metrics.top_viewed_articles(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Reading.top_viewed_articles(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 

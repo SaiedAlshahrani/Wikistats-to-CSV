@@ -24,7 +24,7 @@ def editors__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Contributing_Metrics.editors(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Contributing.editors(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -45,7 +45,7 @@ def active_editors__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Contributing_Metrics.active_editors(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Contributing.active_editors(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -68,7 +68,7 @@ def edits__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Contributing_Metrics.edits(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Contributing.edits(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -89,7 +89,7 @@ def user_edits__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Contributing_Metrics.user_edits(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Contributing.user_edits(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -112,7 +112,7 @@ def new_pages__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Contributing_Metrics.new_pages(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Contributing.new_pages(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -133,7 +133,7 @@ def new_registered_users__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Contributing_Metrics.new_registered_users(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Contributing.new_registered_users(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -156,7 +156,7 @@ def top_editors__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Contributing_Metrics.top_editors(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Contributing.top_editors(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -179,7 +179,7 @@ def top_edited_pages__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Contributing_Metrics.top_edited_pages(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Contributing.top_edited_pages(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -200,7 +200,7 @@ def active_editors_by_country__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Contributing_Metrics.active_editors_by_country(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Contributing.active_editors_by_country(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 

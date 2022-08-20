@@ -22,7 +22,7 @@ def absolute_bytes_difference__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content_Metrics.absolute_bytes_difference(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content.absolute_bytes_difference(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -47,7 +47,7 @@ def edited_pages__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content_Metrics.edited_pages(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content.edited_pages(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -70,7 +70,7 @@ def net_bytes_difference__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content_Metrics.net_bytes_difference(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content.net_bytes_difference(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -93,7 +93,7 @@ def pages_to_date__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content_Metrics.pages_to_date(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content.pages_to_date(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -116,7 +116,7 @@ def total_media_requests__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content_Metrics.total_media_requests(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content.total_media_requests(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
@@ -138,7 +138,7 @@ def top_media_requests__test():
                     interval=list(intervals.keys())[list(intervals.values()).index(intervals[i])]
                     counter+=1
                     print(f'@@ Iteration #{counter}:  wiki=`{wikis[wiki]}`,  period=`{period}`,  filter=`{filter}`,  interval=`{interval}`:')
-                    Content_Metrics.top_media_requests(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
+                    Content.top_media_requests(wiki=wikis[wiki], period=period, filter=filter, interval=interval)
                     print('\n')
 
 
