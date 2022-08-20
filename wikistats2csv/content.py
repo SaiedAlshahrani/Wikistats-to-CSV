@@ -57,25 +57,32 @@ class Content:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            if wiki not in wikis:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+            elif period not in periods:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+            elif filter not in filters:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+            elif interval not in intervals:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:
-                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-
-        finally: exit()
+                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
 
 
     def edited_pages(wiki, period, filter, interval):
@@ -128,25 +135,32 @@ class Content:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            if wiki not in wikis:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+            elif period not in periods:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+            elif filter not in filters:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+            elif interval not in intervals:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:
-                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-
-        finally: exit()
+                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
 
 
     def net_bytes_difference(wiki, period, filter, interval):
@@ -197,25 +211,32 @@ class Content:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            if wiki not in wikis:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+            elif period not in periods:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+            elif filter not in filters:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+            elif interval not in intervals:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:
-                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-
-        finally: exit()
+                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
 
 
     def pages_to_date(wiki, period, filter, interval):
@@ -229,7 +250,7 @@ class Content:
                        'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user'}
 
             intervals = {'daily':'daily', 'monthly':'monthly'}
-
+            
             options = webdriver.FirefoxOptions()
             options.add_argument("--headless")
             profile = webdriver.FirefoxProfile()
@@ -266,25 +287,32 @@ class Content:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            if wiki not in wikis:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+            elif period not in periods:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+            elif filter not in filters:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+            elif interval not in intervals:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:
-                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-
-        finally: exit()
+                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
 
 
     def total_media_requests(wiki, period, filter, interval):
@@ -335,25 +363,32 @@ class Content:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            if wiki not in wikis:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+            elif period not in periods:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+            elif filter not in filters:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+            elif interval not in intervals:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:
-                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-
-        finally: exit()
+                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
 
 
     def top_media_requests(wiki, period, filter, interval):
@@ -406,22 +441,29 @@ class Content:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print("[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
             exit()
 
         except KeyError:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            if wiki not in wikis:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+            elif period not in periods:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+            elif filter not in filters:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+            elif interval not in intervals:
+                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except selenium.common.exceptions.NoSuchElementException:
-           rich.print("[bright_red]## Error:[/][bright_white] one of these: period->'{period}', filter->'{filter}', or interval->'{interval}' is not supported.[/]\n")
+            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print("[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
-            else:
-                rich.print("[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
-
-        finally: exit()
+                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+            else: 
+                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
