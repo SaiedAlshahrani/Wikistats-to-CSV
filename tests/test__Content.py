@@ -1,6 +1,6 @@
-from Helper import *
-from Content import *
 from itertools import islice
+from wikistats2csv import Helper
+from wikistats2csv import Content
 
 
 def absolute_bytes_difference__test():
@@ -8,7 +8,7 @@ def absolute_bytes_difference__test():
     # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
-    filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
+    filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content',
                 'editor-type-user':'editor_type~user', 'editor-type-name-bot':'editor_type~name-bot', 'editor-type-anonymous':'editor_type~anonymous', 'editor-type-group-bot':
                 'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user'}
     intervals = {'daily':'daily', 'monthly':'monthly'}
@@ -31,10 +31,10 @@ def edited_pages__test():
     # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
-    filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
+    filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content',
                 'editor-type-user':'editor_type~user', 'editor-type-name-bot':'editor_type~name-bot', 'editor-type-anonymous':'editor_type~anonymous', 'editor-type-group-bot':
-                'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user', 'activity-level-1-to-4-edits':'activity_level~1..4-edits', 
-                'activity-level-5-to-24-edits':'activity_level~5..24-edits', 'activity-level-25-to-99-edits':'activity_level~25..99-edits', 
+                'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user', 'activity-level-1-to-4-edits':'activity_level~1..4-edits',
+                'activity-level-5-to-24-edits':'activity_level~5..24-edits', 'activity-level-25-to-99-edits':'activity_level~25..99-edits',
                 'activity-level-100-or-more-edits':'activity_level~100..-edits', 'activity-level-all':'activity_level~1..4-edits*5..24-edits*25..99-edits*100..-edits'}
     intervals = {'daily':'daily', 'monthly':'monthly'}
     counter=0
@@ -56,7 +56,7 @@ def net_bytes_difference__test():
     # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
-    filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
+    filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content',
                 'editor-type-user':'editor_type~user', 'editor-type-name-bot':'editor_type~name-bot', 'editor-type-anonymous':'editor_type~anonymous', 'editor-type-group-bot':
                 'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user'}
     intervals = {'daily':'daily', 'monthly':'monthly'}
@@ -79,7 +79,7 @@ def pages_to_date__test():
     # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
-    filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content', 
+    filters = {'no-filter':'~total', 'page-type-content':'page_type~content', 'page-type-non-content':'page_type~non-content', 'page-type-all':'page_type~content*non-content',
                'editor-type-user':'editor_type~user', 'editor-type-name-bot':'editor_type~name-bot', 'editor-type-anonymous':'editor_type~anonymous', 'editor-type-group-bot':
                'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user'}
     intervals = {'daily':'daily', 'monthly':'monthly'}
@@ -102,8 +102,8 @@ def total_media_requests__test():
     # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
-    filters = {'no-filter':'~total', 'media-type-image':'media_type~image', 'media-type-video':'media_type~video', 'media-type-audio':'media_type~audio', 
-                'media-type-document':'media_type~document', 'media-type-other':'media_type~other', 'media-type-all':'media_type~image*video*audio*document*other', 
+    filters = {'no-filter':'~total', 'media-type-image':'media_type~image', 'media-type-video':'media_type~video', 'media-type-audio':'media_type~audio',
+                'media-type-document':'media_type~document', 'media-type-other':'media_type~other', 'media-type-all':'media_type~image*video*audio*document*other',
                 'agent-type-user':'agent~user', 'agent-type-spider':'agent~spider', 'agent-type-all':'agent~user*spider'}
     intervals = {'daily':'daily', 'monthly':'monthly'}
     counter=0
@@ -125,7 +125,7 @@ def top_media_requests__test():
     # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'last-month':'last-month'}
-    filters = {'no-filter':'~total', 'media-type-image':'(media_type)~image', 'media-type-video':'(media_type)~video', 'media-type-audio':'(media_type)~audio', 
+    filters = {'no-filter':'~total', 'media-type-image':'(media_type)~image', 'media-type-video':'(media_type)~video', 'media-type-audio':'(media_type)~audio',
                 'media-type-document':'(media_type)~document', 'media-type-other':'(media_type)~other', 'media-type-all':'(media_type)~image*video*audio*document*other'}
     intervals = {'daily':'daily', 'monthly':'monthly'}
     counter=0
@@ -157,6 +157,6 @@ if __name__ == "__main__":
 
     print("$$$ Testing: `total_media_requests(wiki, period, filter, interval)`:")
     total_media_requests__test()
-    
+
     print("$$$ Testing: `top_media_requests(wiki, period, filter, interval)`:")
     top_media_requests__test()

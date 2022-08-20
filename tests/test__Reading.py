@@ -1,6 +1,6 @@
-from Helper import *
-from Reading import *
 from itertools import islice
+from wikistats2csv import Helper
+from wikistats2csv import Reading
 
 
 def total_page_views__test():
@@ -8,9 +8,9 @@ def total_page_views__test():
     # Select only the 1st Wiki.
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
-    filters = {'no-filter':'~total', 'access-method-desktop':'access~desktop', 'access-method-mobile-app':'access~mobile-app', 
-                       'access-method-mobile-web':'access~mobile-web', 'access-method-all':'access~desktop*mobile-app*mobile-web', 
-                       'agent-type-user':'agent~user', 'agent-type-spider':'agent~spider', 'agent-type-automated':'agent~automated', 
+    filters = {'no-filter':'~total', 'access-method-desktop':'access~desktop', 'access-method-mobile-app':'access~mobile-app',
+                       'access-method-mobile-web':'access~mobile-web', 'access-method-all':'access~desktop*mobile-app*mobile-web',
+                       'agent-type-user':'agent~user', 'agent-type-spider':'agent~spider', 'agent-type-automated':'agent~automated',
                        'agent-type-all':'agent~user*spider*automated'}
     intervals = {'daily':'daily', 'monthly':'monthly'}
     counter=0
@@ -33,7 +33,7 @@ def legacy_page_views__test():
     wikis = list(islice(wikis, 1))
     periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
     filters = {'no-filter':'~total', 'access-site-mobile-site':'(access-site)~mobile-site', 'access-site-desktop-site':
-                       '(access-site)~desktop-site', 'access-site-all':'(access-site)~mobile-site*desktop-site'}    
+                       '(access-site)~desktop-site', 'access-site-all':'(access-site)~mobile-site*desktop-site'}
     intervals = {'daily':'daily', 'monthly':'monthly'}
     counter=0
     for wiki in range(len(wikis)):
