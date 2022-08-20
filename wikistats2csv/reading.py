@@ -5,6 +5,8 @@ import selenium
 from time import sleep
 from .helper import Helper
 from selenium import webdriver
+import geckodriver_autoinstaller
+geckodriver_autoinstaller.install()
 
 
 class Reading:
