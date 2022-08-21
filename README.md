@@ -92,7 +92,7 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 | total-media-requests*<br>total_media_requests**           | all-years, <br>one-year, <br>two-years, <br>three-months, <br>one-month | no-filter, <br>media-type-image, <br>media-type-video, <br>media-type-audio, <br>media-type-document, <br>media-type-other, <br>media-type-all, <br>agent-type-user, <br>agent-type-spider, <br>agent-type-all                                                                                                                                                                  | daily,<br> monthly |
 | top-media-requests*<br>top_media_requests**               | last-month                                                              | no-filter, <br>media-type-image, <br>media-type-video, <br>media-type-audio, <br>media-type-document, <br>media-type-other, <br>media-type-all                                                                                                                                                                                                                                  | daily,<br> monthly |
 
- <i>* CLI Queries.        ** Py Functions.*** More complex filters are coming to the new  versions.</i>
+ <i>* CLI Queries.        ** Py Functions.        *** More complex filters are coming to the new versions.</i>
 
 ### Contributing Metrics/Class:
 
@@ -109,3 +109,15 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 | active-editors-by-country* <br>active_editors_by_country** | last-month                                                              | activity-level-5-to-99-edits, <br>activity-level-100-or-more-edits                                                                                                                                                                                                                                                                                                             | daily,<br> monthly |
 
  <i>* CLI Queries.        ** Py Functions.        *** More complex filters are coming to the new versions.</i>
+
+### Reading Metrics/Class:
+
+| Queries*<br>Functions**                           | Periods                                                                 | Filters***                                                                                                                                                                                                             | Intervals          |
+|:-------------------------------------------------:|:-----------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------:|
+| total-page-views*<br>total_page_views**           | all-years, <br>one-year, <br>two-years, <br>three-months, <br>one-month | no-filter, <br/>access-method-desktop,<br/> access-method-mobile-app,<br/>access-method-mobile-web, <br/>access-method-all,<br/>agent-type-user, <br/>agent-type-spider, <br/>agent-type-automated,<br/>agent-type-all | daily,<br> monthly |
+| legacy-page-views*<br>legacy_page_views**         | all-years, <br>one-year, <br>two-years, <br>three-months, <br>one-month | no-filter, <br/>access-site-mobile-site, <br/>access-site-desktop-site, <br/>access-site-all                                                                                                                           | daily,<br> monthly |
+| page-views-by-country*<br>page_views_by_country** | last-month                                                              | no-filter, <br/>access-method-desktop,<br/> access-method-mobile-app,<br/>access-method-mobile-web, <br/>access-method-all                                                                                             | daily,<br> monthly |
+| unique-devices* <br>unique_devices**              | all-years, <br>one-year, <br>two-years, <br>three-months, <br>one-month | no-filter, <br/>access-site-mobile-site, <br/>access-site-desktop-site, <br/>access-site-all                                                                                                                           | daily,<br> monthly |
+| top-viewed-articles*<br>top_viewed_articles**     | last-month                                                              | no-filter, <br/>access-method-desktop,<br/> access-method-mobile-app,<br/>access-method-mobile-web, <br/>access-method-all                                                                                             | daily,<br> monthly |
+
+<i> * CLI Queries.        ** Py Functions.        *** More complex filters are coming to the new versions.</i>*
