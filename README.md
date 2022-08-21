@@ -92,7 +92,7 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 | total-media-requests*<br>total_media_requests**           | all-years, <br>one-year, <br>two-years, <br>three-months, <br>one-month | no-filter, <br>media-type-image, <br>media-type-video, <br>media-type-audio, <br>media-type-document, <br>media-type-other, <br>media-type-all, <br>agent-type-user, <br>agent-type-spider, <br>agent-type-all                                                                                                                                                                  | daily,<br> monthly |
 | top-media-requests*<br>top_media_requests**               | last-month                                                              | no-filter, <br>media-type-image, <br>media-type-video, <br>media-type-audio, <br>media-type-document, <br>media-type-other, <br>media-type-all                                                                                                                                                                                                                                  | daily,<br> monthly |
 
- <i>* CLI Queries.                ** Py Functions.                *** More complex filters are coming to the new  versions.</i>
+ <i>* CLI Queries.        ** Py Functions.*** More complex filters are coming to the new  versions.</i>
 
 ### Contributing Metrics/Class:
 
@@ -108,4 +108,4 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 | top-edited-pages* <br>top_edited_pages**                   | last-month                                                              | no-filter, <br>page-type-content, <br>page-type-non-content, <br>page-type-all, <br>editor-type-user, <br>editor-type-name-bot, <br>editor-type-anonymous, <br>editor-type-group-bot, <br>editor-type-all                                                                                                                                                                      | daily,<br> monthly |
 | active-editors-by-country* <br>active_editors_by_country** | last-month                                                              | activity-level-5-to-99-edits, <br>activity-level-100-or-more-edits                                                                                                                                                                                                                                                                                                             | daily,<br> monthly |
 
- <i>* CLI Queries.                ** Py Functions.                *** More complex filters are coming to the new versions.</i>
+ <i>* CLI Queries.        ** Py Functions.        *** More complex filters are coming to the new versions.</i>
