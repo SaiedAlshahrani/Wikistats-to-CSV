@@ -65,6 +65,7 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 ```python
 >>> from wikistats2csv import Content
 >>> Content.pages_to_date(wiki='es', period='all-years', filter='page-type-all', interval='monthly')
+
 ## Downloaded `spanish--pages-to-date--page-type-all--all-years--monthly.csv` successfully :-)
 
 ** Quick glance at `spanish--pages-to-date--page-type-all--all-years--monthly.csv` file:
