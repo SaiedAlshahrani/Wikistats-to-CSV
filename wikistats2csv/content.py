@@ -2,7 +2,7 @@ import os
 import pandas
 import selenium
 from time import sleep
-from .helper import Helper
+from helper import Helper
 from selenium import webdriver
 import geckodriver_autoinstaller
 geckodriver_autoinstaller.install()
@@ -71,16 +71,16 @@ class Content:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
                 print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
-                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif filter not in filters:
                 print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
                 print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
-            else: 
+            else:
                 print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
-        
+
         except selenium.common.exceptions.WebDriverException:
             print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
             print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
@@ -94,13 +94,13 @@ class Content:
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else: 
+            else:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def edited_pages(wiki, period, filter, interval):
         try:
-            
+
             try:
                 wikis = Helper.get_Wikis_Codes()
             except NameError:
@@ -161,16 +161,16 @@ class Content:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
                 print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
-                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif filter not in filters:
                 print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
                 print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
-            else: 
+            else:
                 print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
-        
+
         except selenium.common.exceptions.WebDriverException:
             print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
             print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
@@ -184,13 +184,13 @@ class Content:
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else: 
+            else:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def net_bytes_difference(wiki, period, filter, interval):
         try:
-            
+
             try:
                 wikis = Helper.get_Wikis_Codes()
             except NameError:
@@ -249,16 +249,16 @@ class Content:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
                 print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
-                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif filter not in filters:
                 print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
                 print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
-            else: 
+            else:
                 print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
-        
+
         except selenium.common.exceptions.WebDriverException:
             print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
             print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
@@ -272,13 +272,13 @@ class Content:
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else: 
+            else:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def pages_to_date(wiki, period, filter, interval):
         try:
-            
+
             try:
                 wikis = Helper.get_Wikis_Codes()
             except NameError:
@@ -292,7 +292,7 @@ class Content:
                        'editor_type~group-bot', 'editor-type-all':'editor_type~anonymous*group-bot*name-bot*user'}
 
             intervals = {'daily':'daily', 'monthly':'monthly'}
-            
+
             options = webdriver.FirefoxOptions()
             options.add_argument("--headless")
             profile = webdriver.FirefoxProfile()
@@ -337,16 +337,16 @@ class Content:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
                 print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
-                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif filter not in filters:
                 print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
                 print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
-            else: 
+            else:
                 print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
-        
+
         except selenium.common.exceptions.WebDriverException:
             print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
             print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
@@ -360,7 +360,7 @@ class Content:
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else: 
+            else:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
@@ -425,16 +425,16 @@ class Content:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
                 print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
-                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif filter not in filters:
                 print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
                 print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
-            else: 
+            else:
                 print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
-        
+
         except selenium.common.exceptions.WebDriverException:
             print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
             print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
@@ -448,13 +448,13 @@ class Content:
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else: 
+            else:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def top_media_requests(wiki, period, filter, interval):
         try:
-            
+
             try:
                 wikis = Helper.get_Wikis_Codes()
             except NameError:
@@ -515,16 +515,16 @@ class Content:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
                 print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
-                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif filter not in filters:
                 print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
                 print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
                 print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
-            else: 
+            else:
                 print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
-        
+
         except selenium.common.exceptions.WebDriverException:
             print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
             print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
@@ -538,5 +538,5 @@ class Content:
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
                 print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else: 
+            else:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")

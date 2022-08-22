@@ -1,11 +1,10 @@
 import sys
 import rich
-from .helper import Helper
-from .content import Content
-from .reading import Reading
-from .contributing import Contributing
-from .custom_argparse import ArgumentParser
-
+from helper import Helper
+from content import Content
+from reading import Reading
+from contributing import Contributing
+from custom_argparse import ArgumentParser
 
 def list_Wikis_Codes():
     wikis = Helper.get_Wikis_Codes()
@@ -38,10 +37,10 @@ def main():
     parser.add_argument('-f', '--filter', type=str, required=False, default='no-filter', metavar='', help='Metrics Filters')
     parser.add_argument('-i', '--interval', type=str, required=False, default='monthly', metavar='', help='Time Intervals')
     parser.add_argument('-lw', '--list-wikis', type=str, required=False, metavar='', help='List Wikipedias')
-    
+
     try:
         args = parser.parse_args()
-    
+
         if args.wiki!=None:
 
             if args.metric=='content':
@@ -149,7 +148,7 @@ def main():
 
                 else:
                     print(f"\u001b[91mError:\u001b[0m wikistats2csv metric `contributing` does not support this query: '{args.query}'.\n")
-            
+
             else:
                 print(f"\u001b[91mError:\u001b[0m wikistats2csv does not support this metric: '{args.metric}'.\n")
 
