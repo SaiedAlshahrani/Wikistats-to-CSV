@@ -63,11 +63,8 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 ### * As Python Package:
 
 ```python
->>> from wikistats2csv import Helper
 >>> from wikistats2csv import Content
->>> 
 >>> Content.pages_to_date(wiki='es', period='all-years', filter='page-type-all', interval='monthly')
-
 ## Downloaded `spanish--pages-to-date--page-type-all--all-years--monthly.csv` successfully :-)
 
 ** Quick glance at `spanish--pages-to-date--page-type-all--all-years--monthly.csv` file:
@@ -120,4 +117,4 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 | unique-devices* <br>unique_devices**              | all-years, <br>one-year, <br>two-years, <br>three-months, <br>one-month | no-filter, <br/>access-site-mobile-site, <br/>access-site-desktop-site, <br/>access-site-all                                                                                                                           | daily,<br> monthly |
 | top-viewed-articles*<br>top_viewed_articles**     | last-month                                                              | no-filter, <br/>access-method-desktop,<br/> access-method-mobile-app,<br/>access-method-mobile-web, <br/>access-method-all                                                                                             | daily,<br> monthly |
 
-<i> * CLI Queries.        ** Py Functions.        *** More complex filters are coming to the new versions.</i>*
+<i> * CLI Queries.        ** Py Functions.        *** More complex filters are coming to the new versions.</i>

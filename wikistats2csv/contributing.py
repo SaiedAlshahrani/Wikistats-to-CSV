@@ -1,5 +1,4 @@
 import os
-import rich
 import pandas
 import selenium
 from time import sleep
@@ -13,7 +12,12 @@ class Contributing:
 
     def editors(wiki, period, filter, interval):
         try:
-            wikis = Helper.get_Wikis_Codes()
+
+            try:
+                wikis = Helper.get_Wikis_Codes()
+            except NameError:
+                print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
+                exit()
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
@@ -61,37 +65,49 @@ class Contributing:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
         except KeyError:
             if wiki not in wikis:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
             elif filter not in filters:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
+        
+        except selenium.common.exceptions.WebDriverException:
+            print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
+            print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
 
         except selenium.common.exceptions.NoSuchElementException:
-            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+            print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+                print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def active_editors(wiki, period, filter, interval):
         try:
-            wikis = Helper.get_Wikis_Codes()
+
+            try:
+                wikis = Helper.get_Wikis_Codes()
+            except NameError:
+                print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
+                exit()
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
@@ -135,37 +151,49 @@ class Contributing:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
         except KeyError:
             if wiki not in wikis:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
             elif filter not in filters:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
+        
+        except selenium.common.exceptions.WebDriverException:
+            print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
+            print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
 
         except selenium.common.exceptions.NoSuchElementException:
-            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+            print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+                print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def edits(wiki, period, filter, interval):
         try:
-            wikis = Helper.get_Wikis_Codes()
+
+            try:
+                wikis = Helper.get_Wikis_Codes()
+            except NameError:
+                print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
+                exit()
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
@@ -211,37 +239,49 @@ class Contributing:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
         except KeyError:
             if wiki not in wikis:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
             elif filter not in filters:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
+        
+        except selenium.common.exceptions.WebDriverException:
+            print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
+            print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
 
         except selenium.common.exceptions.NoSuchElementException:
-            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+            print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+                print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def user_edits(wiki, period, filter, interval):
         try:
-            wikis = Helper.get_Wikis_Codes()
+
+            try:
+                wikis = Helper.get_Wikis_Codes()
+            except NameError:
+                print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
+                exit()
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
@@ -285,37 +325,49 @@ class Contributing:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
         except KeyError:
             if wiki not in wikis:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
             elif filter not in filters:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
+        
+        except selenium.common.exceptions.WebDriverException:
+            print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
+            print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
 
         except selenium.common.exceptions.NoSuchElementException:
-            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+            print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+                print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def new_pages(wiki, period, filter, interval):
         try:
-            wikis = Helper.get_Wikis_Codes()
+
+            try:
+                wikis = Helper.get_Wikis_Codes()
+            except NameError:
+                print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
+                exit()
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
@@ -361,37 +413,49 @@ class Contributing:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
         except KeyError:
             if wiki not in wikis:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
             elif filter not in filters:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
+        
+        except selenium.common.exceptions.WebDriverException:
+            print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
+            print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
 
         except selenium.common.exceptions.NoSuchElementException:
-            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+            print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+                print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def new_registered_users(wiki, period, filter, interval):
         try:
-            wikis = Helper.get_Wikis_Codes()
+
+            try:
+                wikis = Helper.get_Wikis_Codes()
+            except NameError:
+                print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
+                exit()
 
             periods = {'all-years':'all', 'one-year':'1-year', 'two-years':'2-year', 'three-months':'3-month', 'one-month':'1-month'}
 
@@ -435,42 +499,54 @@ class Contributing:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
         except KeyError:
             if wiki not in wikis:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
             elif filter not in filters:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
+        
+        except selenium.common.exceptions.WebDriverException:
+            print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
+            print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
 
         except selenium.common.exceptions.NoSuchElementException:
-            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+            print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+                print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def top_editors(wiki, period, filter, interval):
         try:
-            wikis = Helper.get_Wikis_Codes()
+
+            try:
+                wikis = Helper.get_Wikis_Codes()
+            except NameError:
+                print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
+                exit()
 
             periods = {'last-month':'last-month'}
 
-            if period not in periods:
-                periods.update({period:period})
+            # if period not in periods:
+            #     periods.update({period:period})
 
             filters = {'no-filter':'~total', 'page-type-content':'(page_type)~content', 'page-type-non-content':'(page_type)~non-content', 'page-type-all':'(page_type)~content*non-content',
                        'editor-type-user':'(editor_type)~user', 'editor-type-name-bot':'(editor_type)~name-bot', 'editor-type-anonymous':'(editor_type)~anonymous', 'editor-type-group-bot':
@@ -514,42 +590,54 @@ class Contributing:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
         except KeyError:
             if wiki not in wikis:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
             elif filter not in filters:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
+        
+        except selenium.common.exceptions.WebDriverException:
+            print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
+            print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
 
         except selenium.common.exceptions.NoSuchElementException:
-            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+            print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+                print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def top_edited_pages(wiki, period, filter, interval):
         try:
-            wikis = Helper.get_Wikis_Codes()
+
+            try:
+                wikis = Helper.get_Wikis_Codes()
+            except NameError:
+                print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
+                exit()
 
             periods = {'last-month':'last-month'}
 
-            if period not in periods:
-                periods.update({period:period})
+            # if period not in periods:
+            #     periods.update({period:period})
 
             filters = {'no-filter':'~total', 'page-type-content':'(page_type)~content', 'page-type-non-content':'(page_type)~non-content', 'page-type-all':'(page_type)~content*non-content',
                        'editor-type-user':'(editor_type)~user', 'editor-type-name-bot':'(editor_type)~name-bot', 'editor-type-anonymous':'(editor_type)~anonymous', 'editor-type-group-bot':
@@ -593,42 +681,54 @@ class Contributing:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
         except KeyError:
             if wiki not in wikis:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
             elif filter not in filters:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
+        
+        except selenium.common.exceptions.WebDriverException:
+            print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
+            print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
 
         except selenium.common.exceptions.NoSuchElementException:
-            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+            print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+                print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
 
 
     def active_editors_by_country(wiki, period, filter, interval):
         try:
-            wikis = Helper.get_Wikis_Codes()
+
+            try:
+                wikis = Helper.get_Wikis_Codes()
+            except NameError:
+                print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
+                exit()
 
             periods = {'last-month':'last-month'}
 
-            if period not in periods:
-                periods.update({period:period})
+            # if period not in periods:
+            #     periods.update({period:period})
 
             filters = {'activity-level-5-to-99-edits':'(activity-level)~5..99-edits', 'activity-level-100-or-more-edits':'(activity-level)~100..-edits'}
 
@@ -675,29 +775,36 @@ class Contributing:
             driver.quit()
 
         except KeyboardInterrupt:
-            rich.print(f"[bright_red]## Error:[/][bright_white] exiting due to pressing ctrl-c ...[/]\n")
+            print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
         except KeyError:
             if wiki not in wikis:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this Wikipedia: '{wiki}' is not supported. To list wiki codes use: `wikistats2csv -lw or --list-wikis`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
             elif period not in periods:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time period: '{period}' is not supported. To list time periods use: `wikistats2csv -lp or --list-periods`[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time period: '{period}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")            
             elif filter not in filters:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this filter: '{filter}' is not supported. To list supported filters use: `wikistats2csv -lf or --list-filters`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this filter: '{filter}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             elif interval not in intervals:
-                rich.print(f"[bright_red]## Error:[/][bright_white] this time interval: '{interval}' is not supported. To list time intervals use: `wikistats2csv -li or --list-intervals`.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m this time interval: '{interval}' is not supported. See GitHub for details: ")
+                print("       https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/README.md \n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+                print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
+        
+        except selenium.common.exceptions.WebDriverException:
+            print(f"\u001b[91mError:\u001b[0m 'geckodriver' executable needs to be in PATH. See this documentation for details: ")
+            print("       https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/ \n")
 
         except selenium.common.exceptions.NoSuchElementException:
-            rich.print(f"[bright_red]## Error:[/][bright_white] one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.[/]\n")
+            print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
             if 'Loading metric...' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:[/]")
+                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
                 print(request_url, '\n')
             elif 'There is no data available for this date range on this project' in html:
-                rich.print(f"[bright_red]## Error:[/][bright_white] there is no data available for this date range on this Wikipedia.[/]\n")
+                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
             else: 
-                rich.print(f"[bright_red]## Error:[/][bright_white] something unknown went wrong!! Please, try again!![/]\n")
+                print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")

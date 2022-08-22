@@ -3,3 +3,8 @@ logo_colored.py
 .DS_Store
 wikistats2csv/.DS_Store
 tests/.DS_Store
+wikistats2csv/__pycache__/content.cpython-39.pyc
+wikistats2csv/__pycache__/contributing.cpython-39.pyc
+wikistats2csv/__pycache__/custom_argparse.cpython-39.pyc
+wikistats2csv/__pycache__/helper.cpython-39.pyc
+wikistats2csv/__pycache__/reading.cpython-39.pyc

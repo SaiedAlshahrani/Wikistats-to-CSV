@@ -1,7 +1,10 @@
-import pandas , ssl
+import ssl
+import pandas
+
 
 # To Override the SSL Error of '[SSL: CERTIFICATE_VERIFY_FAILED]'. 
 ssl._create_default_https_context = ssl._create_unverified_context
+
 
 class Helper:
     def get_Wikis_Codes():
