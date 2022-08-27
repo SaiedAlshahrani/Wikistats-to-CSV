@@ -6,13 +6,6 @@ from reading import Reading
 from contributing import Contributing
 from custom_argparse import ArgumentParser
 
-def list_Wikis_Codes():
-    wikis = Helper.get_Wikis_Codes()
-    print(f"## List of `{len(wikis)}` Wikipedias and its languages codes:\n")
-    for code, wiki in wikis.items():
-        print(f"{wiki}:`{code}`", end=', ')
-    print('\n') ; exit()
-
 
 def main():
 
@@ -24,7 +17,7 @@ def main():
 
     try:
         if sys.argv[1]=='-lw' or sys.argv[1]=='--list-wikis':
-            list_Wikis_Codes()
+            Helper.list_Wikis_Codes()
     except IndexError:
         pass
 

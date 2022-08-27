@@ -10,10 +10,19 @@ Wikistats-to-CSV is a Python package/wrapper and command line interface (CLI) th
 
 ## Install:
 
-Wikistats-to-CSV (wikistats2csv) requires Python >=3 and the installation of a few Python packages such as `lxml==4.9.1`, `rich==12.5.1`, `pandas==1.4.3`, `selenium==3.141.0`, and `geckodriver-autoinstaller==0.1.0`. For convenience, we included the installation of these packages as a part of the setup process of Wikistats-to-CSV (wikistats2csv).  If you encounter installation errors, you might need to install these packages using `pip` manually. To download Wikistats-to-CSV (wikistats2csv), use this command:
+Wikistats-to-CSV (wikistats2csv) requires Python >=3 and the installation of a few Python packages such as `lxml==4.9.1`, `rich==12.5.1`, `numpy==1.23.2`, `pandas==1.4.3`, `selenium==3.141.0`, and `geckodriver-autoinstaller==0.1.0`. For convenience, we included the installation of these packages as a part of the setup process of Wikistats-to-CSV (wikistats2csv).  If you encounter installation errors, you might need to install these packages using `pip` manually. 
+
+To download Wikistats-to-CSV (wikistats2csv) using `pip` command , we highly recommend you first upgrade the `pip` command to the latest version.
 
 ```bash
-pip install wikistats2csv
+python3 -m pip install --upgrade pip
+python3 -m pip install wikistats2csv
+```
+
+If you encounter a warning of "*WARNING: the script is installed in '/Users/.../.../bin' which is not on path*", then you need to add the displayed path "/Users/.../.../bin" to the `$PATH` variable using this command: 
+
+```bash
+export PATH="/Users/.../.../bin:$PATH"
 ```
 
 ## Usage:

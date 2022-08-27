@@ -66,6 +66,16 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
+        except FileNotFoundError:
+            print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
+            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            exit()
+
+        except OSError:
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
+            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            exit()
+
         except KeyError:
             if wiki not in wikis:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
@@ -89,13 +99,18 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
-            if 'Loading metric...' in html:
-                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
-                print(request_url, '\n')
-            elif 'There is no data available for this date range on this project' in html:
-                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else:
+            try:
+                if 'Loading metric...' in html:
+                    print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
+                    print(request_url, '\n')
+
+                elif 'There is no data available for this date range on this project' in html:
+                    print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
+                else:
+                    print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+            except UnboundLocalError:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+                pass
 
 
     def edited_pages(wiki, period, filter, interval):
@@ -156,6 +171,16 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
+        except FileNotFoundError:
+            print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
+            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            exit()
+
+        except OSError:
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
+            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            exit()
+
         except KeyError:
             if wiki not in wikis:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
@@ -179,13 +204,18 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
-            if 'Loading metric...' in html:
-                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
-                print(request_url, '\n')
-            elif 'There is no data available for this date range on this project' in html:
-                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else:
+            try:
+                if 'Loading metric...' in html:
+                    print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
+                    print(request_url, '\n')
+
+                elif 'There is no data available for this date range on this project' in html:
+                    print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
+                else:
+                    print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+            except UnboundLocalError:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+                pass
 
 
     def net_bytes_difference(wiki, period, filter, interval):
@@ -244,6 +274,16 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
+        except FileNotFoundError:
+            print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
+            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            exit()
+
+        except OSError:
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
+            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            exit()
+
         except KeyError:
             if wiki not in wikis:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
@@ -267,13 +307,18 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
-            if 'Loading metric...' in html:
-                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
-                print(request_url, '\n')
-            elif 'There is no data available for this date range on this project' in html:
-                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else:
+            try:
+                if 'Loading metric...' in html:
+                    print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
+                    print(request_url, '\n')
+
+                elif 'There is no data available for this date range on this project' in html:
+                    print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
+                else:
+                    print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+            except UnboundLocalError:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+                pass
 
 
     def pages_to_date(wiki, period, filter, interval):
@@ -332,6 +377,16 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
+        except FileNotFoundError:
+            print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
+            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            exit()
+
+        except OSError:
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
+            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            exit()
+
         except KeyError:
             if wiki not in wikis:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
@@ -355,13 +410,18 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
-            if 'Loading metric...' in html:
-                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
-                print(request_url, '\n')
-            elif 'There is no data available for this date range on this project' in html:
-                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else:
+            try:
+                if 'Loading metric...' in html:
+                    print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
+                    print(request_url, '\n')
+
+                elif 'There is no data available for this date range on this project' in html:
+                    print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
+                else:
+                    print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+            except UnboundLocalError:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+                pass
 
 
     def total_media_requests(wiki, period, filter, interval):
@@ -420,6 +480,16 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
+        except FileNotFoundError:
+            print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
+            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            exit()
+
+        except OSError:
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
+            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            exit()
+
         except KeyError:
             if wiki not in wikis:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
@@ -443,13 +513,18 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
-            if 'Loading metric...' in html:
-                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
-                print(request_url, '\n')
-            elif 'There is no data available for this date range on this project' in html:
-                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else:
+            try:
+                if 'Loading metric...' in html:
+                    print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
+                    print(request_url, '\n')
+
+                elif 'There is no data available for this date range on this project' in html:
+                    print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
+                else:
+                    print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+            except UnboundLocalError:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+                pass
 
 
     def top_media_requests(wiki, period, filter, interval):
@@ -510,6 +585,16 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m exiting due to pressing ctrl-c ...\n")
             exit()
 
+        except FileNotFoundError:
+            print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
+            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            exit()
+
+        except OSError:
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
+            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            exit()
+
         except KeyError:
             if wiki not in wikis:
                 print(f"\u001b[91mError:\u001b[0m this Wikipedia: '{wiki}' is not supported. To list Wikipedias with codes: `wikistats2csv -lw/--list-wikis`.\n")
@@ -533,10 +618,15 @@ class Content:
             print(f"\u001b[91mError:\u001b[0m one of these parameters: period-->'{period}', filter-->'{filter}', or interval-->'{interval}' is not supported.\n")
 
         except:
-            if 'Loading metric...' in html:
-                print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
-                print(request_url, '\n')
-            elif 'There is no data available for this date range on this project' in html:
-                print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
-            else:
+            try:
+                if 'Loading metric...' in html:
+                    print(f"\u001b[91mError:\u001b[0m cannot load and save this metric due to connection timeout!! Try again, or access it manually from here:")
+                    print(request_url, '\n')
+
+                elif 'There is no data available for this date range on this project' in html:
+                    print("\u001b[91mError:\u001b[0m there is no data available for this date range on this Wikipedia.\n")
+                else:
+                    print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+            except UnboundLocalError:
                 print("\u001b[91mError:\u001b[0m something unknown went wrong!! Please, try again!!\n")
+                pass
