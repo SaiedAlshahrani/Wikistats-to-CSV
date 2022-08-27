@@ -5,10 +5,17 @@ from time import sleep
 from helper import Helper
 from selenium import webdriver
 import geckodriver_autoinstaller
-geckodriver_autoinstaller.install()
 
 
 class Content:
+
+    try:
+        geckodriver_autoinstaller.install()
+    except FileNotFoundError:
+        print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
+        print("       To download the latest version of Firefox: https://www.mozilla.org/en-US/firefox/new/ \n")
+        exit()
+
 
     def absolute_bytes_difference(wiki, period, filter, interval):
         try:
@@ -68,7 +75,7 @@ class Content:
 
         except FileNotFoundError:
             print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
-            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            print("       To download the latest version of Firefox: https://www.mozilla.org/en-US/firefox/new/ \n")
             exit()
 
         except OSError:
@@ -173,7 +180,7 @@ class Content:
 
         except FileNotFoundError:
             print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
-            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            print("       To download the latest version of Firefox: https://www.mozilla.org/en-US/firefox/new/ \n")
             exit()
 
         except OSError:
@@ -276,7 +283,7 @@ class Content:
 
         except FileNotFoundError:
             print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
-            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            print("       To download the latest version of Firefox: https://www.mozilla.org/en-US/firefox/new/ \n")
             exit()
 
         except OSError:
@@ -379,7 +386,7 @@ class Content:
 
         except FileNotFoundError:
             print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
-            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            print("       To download the latest version of Firefox: https://www.mozilla.org/en-US/firefox/new/ \n")
             exit()
 
         except OSError:
@@ -482,7 +489,7 @@ class Content:
 
         except FileNotFoundError:
             print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
-            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            print("       To download the latest version of Firefox: https://www.mozilla.org/en-US/firefox/new/ \n")
             exit()
 
         except OSError:
@@ -587,7 +594,7 @@ class Content:
 
         except FileNotFoundError:
             print(f"\u001b[91mError:\u001b[0m Firefox web browser application is not installed on this machine.")
-            print("       `Wikistats-to-CSV` requires Firefox. To download it: https://www.mozilla.org/en-US/firefox/new/ \n")
+            print("       To download the latest version of Firefox: https://www.mozilla.org/en-US/firefox/new/ \n")
             exit()
 
         except OSError:
