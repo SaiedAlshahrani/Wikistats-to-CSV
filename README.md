@@ -132,3 +132,24 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 | top-viewed-articles*<br>top_viewed_articles**     | last-month                                                              | no-filter, <br/>access-method-desktop,<br/> access-method-mobile-app,<br/>access-method-mobile-web, <br/>access-method-all                                                                                             | daily,<br> monthly |
 
 <i> * CLI Queries.        ** Py Functions.        *** More complex filters are coming to the new versions.</i>
+
+## Extra Features:
+
+### List All Wikipedia Languages with its Codes:
+
+#### * As CLI:
+
+To return the full list of all Wikipedia's supported languages with their codes, try one of these commands:
+
+```bash
+$ wikistats2csv -lw
+# OR
+$ wikistats2csv --list-wikis
+```
+
+#### * As Python Package:
+
+```python
+from wikistats2csv import Helper
+Helper.get_Wikis_Codes()
+```
