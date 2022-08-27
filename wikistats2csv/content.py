@@ -79,8 +79,8 @@ class Content:
             exit()
 
         except OSError:
-            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
-            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded a bad or incompatible version of the executable file of `geckodriver`.")
+            print("       Please, download the compatible `geckodriver` manually from here: https://github.com/mozilla/geckodriver/releases \n")
             exit()
 
         except KeyError:
@@ -184,8 +184,8 @@ class Content:
             exit()
 
         except OSError:
-            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
-            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded a bad or incompatible version of the executable file of `geckodriver`.")
+            print("       Please, download the compatible `geckodriver` manually from here: https://github.com/mozilla/geckodriver/releases \n")
             exit()
 
         except KeyError:
@@ -287,8 +287,8 @@ class Content:
             exit()
 
         except OSError:
-            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
-            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded a bad or incompatible version of the executable file of `geckodriver`.")
+            print("       Please, download the compatible `geckodriver` manually from here: https://github.com/mozilla/geckodriver/releases \n")
             exit()
 
         except KeyError:
@@ -390,8 +390,8 @@ class Content:
             exit()
 
         except OSError:
-            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
-            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded a bad or incompatible version of the executable file of `geckodriver`.")
+            print("       Please, download the compatible `geckodriver` manually from here: https://github.com/mozilla/geckodriver/releases \n")
             exit()
 
         except KeyError:
@@ -493,8 +493,8 @@ class Content:
             exit()
 
         except OSError:
-            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
-            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded a bad or incompatible version of the executable file of `geckodriver`.")
+            print("       Please, download the compatible `geckodriver` manually from here: https://github.com/mozilla/geckodriver/releases \n")
             exit()
 
         except KeyError:
@@ -598,8 +598,8 @@ class Content:
             exit()
 
         except OSError:
-            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded an incompatible executable of `geckodriver`.")
-            print("       Please, download the compatible driver manually from here: https://github.com/mozilla/geckodriver/releases \n")
+            print(f"\u001b[91mError:\u001b[0m seems `geckodriver-autoinstaller' downloaded a bad or incompatible version of the executable file of `geckodriver`.")
+            print("       Please, download the compatible `geckodriver` manually from here: https://github.com/mozilla/geckodriver/releases \n")
             exit()
 
         except KeyError:
