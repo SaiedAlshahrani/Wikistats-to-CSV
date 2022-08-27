@@ -1,12 +1,6 @@
 # Wikistats-to-CSV
 
-```
-              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
-              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║WIKISTATS-TO-CSV║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
-              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
-```
-
-Wikistats-to-CSV is a Python package/wrapper and command line interface (CLI) that downloads Wikipedia Statistics for a given Wikipedia in a format of CSV  from [Wikimedia Statistics](https://stats.wikimedia.org) project. 
+![alt text](https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/images/wikistats2csv-logo.png?raw=true)
 
 ## Install:
 
