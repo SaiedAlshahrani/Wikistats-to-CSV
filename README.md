@@ -32,9 +32,9 @@ export PATH="/Users/.../.../bin:$PATH"
 ```bash
 $ wikistats2csv --wiki en --metric content --query pages-to-date --period all-years --filter page-type-all --interval monthly
 
-              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
+              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│█║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║WIKISTATS-TO-CSV║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
-              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
+              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│█║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
 
 ## Downloaded `english--pages-to-date--page-type-all--all-years--monthly.csv` successfully :-)
 
@@ -52,7 +52,7 @@ $ wikistats2csv --wiki en --metric content --query pages-to-date --period all-ye
 ```bash
 $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all -i monthly
 
-              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
+              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│█║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║WIKISTATS-TO-CSV║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
 
