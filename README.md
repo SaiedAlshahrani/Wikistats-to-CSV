@@ -54,7 +54,7 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│█║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
               ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║WIKISTATS-TO-CSV║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
-              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│▌║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
+              ▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║▌█║▌║│▌║│▌║│█║│█║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌
 
 ## Downloaded `arabic--pages-to-date--page-type-all--all-years--monthly.csv` successfully :-)
 
