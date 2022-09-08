@@ -2,6 +2,8 @@
 
 ![alt text](https://github.com/SaiedAlshahrani/Wikistats-to-CSV/blob/main/images/wikistats2csv-logo.png?raw=true)
 
+Wikistats-to-CSV is a Python package and command line interface (CLI) that downloads Wikipedia Statistics for a given Wikipedia in a format of CSV  from [Wikimedia Statistics](https://stats.wikimedia.org) project. 
+
 ## Install:
 
 Wikistats-to-CSV (wikistats2csv) requires Python >=3 and the installation of a few Python packages such as `lxml==4.9.1`, `rich==12.5.1`, `numpy==1.23.2`, `pandas==1.4.3`, `selenium==3.141.0`, and `geckodriver-autoinstaller==0.1.0`. For convenience, we included the installation of these packages as a part of the setup process of Wikistats-to-CSV (wikistats2csv).  If you encounter installation errors, you might need to install these packages using `pip` manually. 
