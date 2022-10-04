@@ -9,7 +9,7 @@ with codecs.open('README.md', 'r', 'utf8') as reader:
 
 setup(
     name = 'wikistats2csv',
-    version = '0.1.4',
+    version = '0.1.6',
     license = 'MIT',
     author = 'Saied Alshahrani',
     author_email = 's3ed.fala7@gmail.com',

@@ -9,11 +9,7 @@ from custom_argparse import ArgumentParser
 
 def main():
 
-    rich.print('''
-            [dodger_blue2]▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║[/][spring_green4]▌█║▌║│▌║│▌║│█║│▌[/][dodger_blue2]║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌[/]
-            [dodger_blue2]▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║[/][red]WIKISTATS-TO-CSV[/][dodger_blue2]║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌[/]
-            [dodger_blue2]▌│║▌║▌█║▌║║▌│║▌│║▌║▌█║[/][spring_green4]▌█║▌║│▌║│▌║│█║│▌[/][dodger_blue2]║▌│█║▌│▌║│▌║║▌║▌█║▌║│▌[/]
-            ''')
+    Helper.logo_msg()
 
     try:
         if sys.argv[1]=='-lw' or sys.argv[1]=='--list-wikis':

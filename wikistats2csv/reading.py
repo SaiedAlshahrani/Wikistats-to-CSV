@@ -23,6 +23,7 @@ class Reading:
             try:
                 wikis = Helper.get_Wikis_Codes()
             except NameError:
+                Helper.logo_msg()
                 print("\u001b[91mError:\u001b[0m you need to import `Helper` class. Use 'from wikistats2csv import Helper'.\n")
                 exit()
 
