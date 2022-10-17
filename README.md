@@ -131,7 +131,7 @@ $ wikistats2csv -w ar -m content -q pages-to-date -p all-years -f page-type-all 
 
 ## Extra Features:
 
-### List All Wikipedia Languages with its Codes:
+### List All Wikipedia Languages with their Codes:
 
 #### * As CLI:
 
