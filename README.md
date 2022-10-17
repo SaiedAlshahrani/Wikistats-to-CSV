@@ -1,4 +1,4 @@
-# Wikistats-to-CSV
+# Wikistats-to-CSV (wikistats2csv)
 
 ![wikistats2csv-logo](https://github.com/zyx11011/wikistats2csv/blob/main/images/wikistats2csv-logo.png?raw=true)
 
